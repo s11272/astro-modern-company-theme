@@ -2,6 +2,8 @@
 
 NOTE - Heavily Inspired by - https://www.wellthapp.com/
 
+![Website Screenshot](screenshots/1.png)
+
 ## Getting Started
 
 To get started with this project, follow these steps:
