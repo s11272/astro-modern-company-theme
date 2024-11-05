@@ -53,7 +53,6 @@ import heroImg from '../assets/hero-image.png';
         id="youtubeVideo"
         class="w-full h-full"
         src="https://www.youtube.com/embed/f4D55v97wLM"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
@@ -62,24 +61,25 @@ import heroImg from '../assets/hero-image.png';
 </div>
 
 <script>
+  // components/Hero.astro
   const playButton = document.getElementById('playButton');
   const videoModal = document.getElementById('videoModal');
   const closeModal = document.getElementById('closeModal');
-  const youtubeVideo = document.getElementById('youtubeVideo');
+  const youtubeVideo = document.getElementById('youtubeVideo') as HTMLIFrameElement;
 
-  playButton.addEventListener('click', () => {
-    videoModal.classList.remove('hidden');
+  playButton?.addEventListener('click', () => {
+    videoModal?.classList.remove('hidden');
   });
 
-  closeModal.addEventListener('click', () => {
-    videoModal.classList.add('hidden');
-    youtubeVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  closeModal?.addEventListener('click', () => {
+    videoModal?.classList.add('hidden');
+    youtubeVideo.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
   });
 
-  videoModal.addEventListener('click', (e) => {
+  videoModal?.addEventListener('click', (e) => {
     if (e.target === videoModal) {
       videoModal.classList.add('hidden');
-      youtubeVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      youtubeVideo.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     }
   });
 </script>
