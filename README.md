@@ -34,6 +34,7 @@ The development server will start at `http://localhost:4321`. Any changes you ma
 
 The project structure is organized as follows:
 
+```bash
 magical-motion/
 ├── src/
 │ ├── components/
@@ -54,7 +55,7 @@ magical-motion/
 ├── tailwind.config.js
 ├── astro.config.mjs
 └── package.json
-
+```
 
 - `src/components/`: This directory contains reusable Astro components used throughout the website.
 - `src/layouts/`: This directory contains the main layout component (`Layout.astro`) that wraps the entire website.
