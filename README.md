@@ -1,4 +1,4 @@
-# Magical Motion Astro Theme
+# Astro Modern Company Theme
 
 NOTE - Heavily Inspired by - https://www.wellthapp.com/
 
