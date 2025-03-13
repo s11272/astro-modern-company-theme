@@ -5,11 +5,11 @@
     "partners": "Partnerzy",
     "testimonials": "Opinie",
     "contact": "Kontakt",
-    "contactUs": "Skontaktuj się"
+    "contactUs": "Skontaktuj się z nami"
   },
   "hero": {
-    "title": "Pierwsza platforma motywacji do codziennej opieki",
-    "subtitle": "Your Company wykorzystuje nauki behawioralne, aby pomóc ludziom tworzyć, ustanawiać i utrzymywać codzienne zachowania, które poprawiają ich życie. Plany zdrowotne odnotowują zmniejszone koszty wykorzystania, znaczące wyniki zdrowotne, zwiększoną jakość i oceny Star.",
+    "title": "Pierwsza platforma motywująca do codziennej opieki",
+    "subtitle": "Your Company wykorzystuje nauki behawioralne, aby pomóc ludziom tworzyć, ustanawiać i utrzymywać codzienne zachowania, które poprawiają ich życie. Plany zdrowotne widzą zmniejszone koszty wykorzystania, znaczące wyniki zdrowotne, zwiększoną jakość i oceny gwiazdkowe.",
     "videoTitle": "Jak działa Your Co.",
     "playVideo": "Odtwórz wideo"
   },
@@ -20,7 +20,7 @@
       { "title": "Przestrzeganie leków" },
       { "title": "Sprawdzanie wartości klinicznych (A1c, BP)" },
       { "title": "Używanie urządzeń medycznych" },
-      { "title": "Uczestnictwo w wizytach u lekarza" },
+      { "title": "Uczestnictwo w wizytach u lekarzy" },
       { "title": "Wykonywanie badań przesiewowych i laboratoryjnych" }
     ],
     "description": "Nasza platforma oparta na nauce jest zbudowana na zasadach ekonomii behawioralnej, aby działać dla najtrudniej dostępnych populacji.",
@@ -28,7 +28,17 @@
   },
   "howItWorks": {
     "title": "Jak to działa",
-    "subtitle": "Nasz proces"
+    "steps": [
+      {
+        "description": "Pomagamy osobom z chorobami przewlekłymi, barierami w dostępie do opieki zdrowotnej i nieufnością wobec systemu medycznego..."
+      },
+      {
+        "description": "...priorytetyzować ich plany opieki każdego dnia poprzez przyjmowanie leków, monitorowanie stanu zdrowia i wykonywanie badań przesiewowych..."
+      },
+      {
+        "description": "...aby pomóc organizacjom osiągać i przekraczać cele w zakresie kosztów, jakości i wyników zdrowotnych."
+      }
+    ]
   },
   "partners": {
     "title": "Nasi Partnerzy",
@@ -36,14 +46,42 @@
   },
   "testimonials": {
     "title": "Co mówią nasi klienci",
-    "subtitle": "Historie sukcesu"
+    "subtitle": "Historie sukcesu",
+    "testimonials": [
+      {
+        "quote": "Bezpiecznie przesłaliśmy naszą bazę danych trudno dostępnych pacjentów wraz ze wszystkimi ich istotnymi schorzeniami i liczbą pacjentów, których chcieliśmy zapisać. Ta platforma wykonała całą ciężką pracę, w tym dotarcie do pacjentów i ich aktywację.",
+        "author": "Dr Brian Hodgkins",
+        "title": "Wiceprezes ds. Operacji Klinicznych",
+        "company": "Desert Oasis Healthcare"
+      },
+      {
+        "quote": "Możliwość zaoferowania programu, który jest tak angażujący i motywujący dla naszych członków, to przełom. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
+        "author": "Jill Feldman",
+        "title": "Dyrektor Operacyjny",
+        "company": "Health Plan of San Mateo"
+      },
+      {
+        "quote": "Po rozpoczęciu przez naszych członków korzystania z tej platformy zaobserwowaliśmy znaczące zmniejszenie wykorzystania i poprawę wyników. Program więcej niż się zwrócił.",
+        "author": "Ian Straayer",
+        "title": "Kierownik ds. Poprawy Jakości",
+        "company": "Priority Health"
+      },
+      {
+        "quote": "Widzenie ponad 90% naszych członków angażujących się w tę platformę codziennie jest świadectwem skuteczności programu. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
+        "author": "Renee Kieffer",
+        "title": "Praktykujący Pielęgniarz",
+        "company": "Alameda Alliance for Health"
+      }
+    ]
   },
   "contact": {
-    "title": "Skontaktuj się",
-    "subtitle": "Porozmawiajmy o Twoich potrzebach",
-    "name": "Imię",
-    "email": "Email",
-    "message": "Wiadomość",
-    "send": "Wyślij wiadomość"
+    "title": "Porozmawiaj z naszym zespołem",
+    "subtitle": "Dowiedz się, jak Wellth może wpłynąć na wyniki zdrowotne, koszty i jakość dla Twojej organizacji.",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "workEmail": "Email służbowy",
+    "phoneNumber": "Numer telefonu",
+    "message": "Jak możemy pomóc?",
+    "send": "Skontaktuj się z nami"
   }
 } 

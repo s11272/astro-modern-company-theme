@@ -1,36 +1,42 @@
 ---
 import { Image } from 'astro:assets';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { ui } from '../i18n/ui';
 import brianHodgkinsImg from "../assets/brian-hodgkins.png"
 import jillFeldmanImg from "../assets/jill-feldman.png"
 import ianStraayerImg from "../assets/ian-straayer.png"
 import reneeKiefferImg from "../assets/renee-kieffer.png"
+
+const lang = getLangFromUrl(Astro.url);
+const t = ui[lang];
+
 const testimonials = [
   {
-    quote: "We securely sent our database of hard-to-reach patients with all their relevant conditions, and the number of patients we wanted to enroll. This platform did all the heavy lifting, including patient outreach and activation.",
-    author: "Dr. Brian Hodgkins",
-    title: "Executive Vice President of Clinical Operations",
-    company: "Desert Oasis Healthcare",
+    quote: t.testimonials.testimonials[0].quote,
+    author: t.testimonials.testimonials[0].author,
+    title: t.testimonials.testimonials[0].title,
+    company: t.testimonials.testimonials[0].company,
     image: brianHodgkinsImg
   },
   {
-    quote: "Being able to offer a program that is so engaging and motivating to our members is a game changer. We have seen significant improvements in our members' health outcomes and quality of life.",
-    author: "Jill Feldman",
-    title: "Chief Operating Officer",
-    company: "Health Plan of San Mateo",
+    quote: t.testimonials.testimonials[1].quote,
+    author: t.testimonials.testimonials[1].author,
+    title: t.testimonials.testimonials[1].title,
+    company: t.testimonials.testimonials[1].company,
     image: jillFeldmanImg
   },
   {
-    quote: "After starting our members on this platform, we've seen significant decreases in utilization and improved outcomes. The program more than paid for itself.",
-    author: "Ian Straayer",
-    title: "Manager of Quality Improvement",
-    company: "Priority Health",
+    quote: t.testimonials.testimonials[2].quote,
+    author: t.testimonials.testimonials[2].author,
+    title: t.testimonials.testimonials[2].title,
+    company: t.testimonials.testimonials[2].company,
     image: ianStraayerImg
   },
   {
-    quote: "Seeing more than 90% of our members engage with this platform daily is a testament to the program's effectiveness. We've seen significant improvements in our members' health outcomes and quality of life.",
-    author: "Renee Kieffer",
-    title: "Nurse Practitioner",
-    company: "Alameda Alliance for Health",
+    quote: t.testimonials.testimonials[3].quote,
+    author: t.testimonials.testimonials[3].author,
+    title: t.testimonials.testimonials[3].title,
+    company: t.testimonials.testimonials[3].company,
     image: reneeKiefferImg
   },
 ];
@@ -38,7 +44,7 @@ const testimonials = [
 
 <section class="bg-gray-100 py-20">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-serif font-bold text-center mb-12">What motivates us</h2>
+    <h2 class="text-3xl font-serif font-bold text-center mb-12">{t.testimonials.title}</h2>
     <div class="flex overflow-x-auto snap-x snap-mandatory">
       {testimonials.map((testimonial) => (
         <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 snap-start">
@@ -49,8 +55,8 @@ const testimonials = [
                 src={testimonial.image} 
                 alt={testimonial.author} 
                 class="w-12 h-12 rounded-full mr-4"
-                // width={600}
-                // height={400}
+                width={48}
+                height={48}
               />
               <div>
                 <p class="font-semibold">{testimonial.author}</p>

@@ -27,8 +27,18 @@
     "cta": "Explore the Your Company platform"
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Our process"
+    "title": "How it works",
+    "steps": [
+      {
+        "description": "We help people with chronic conditions, barriers to accessing healthcare, and distrust of the medical system..."
+      },
+      {
+        "description": "...prioritize their care plans every day by taking medications, monitoring conditions, and getting preventative screenings..."
+      },
+      {
+        "description": "...to help organizations meet and exceed goals for cost, quality, and health outcomes."
+      }
+    ]
   },
   "partners": {
     "title": "Our Partners",
@@ -36,14 +46,42 @@
   },
   "testimonials": {
     "title": "What Our Clients Say",
-    "subtitle": "Success stories"
+    "subtitle": "Success stories",
+    "testimonials": [
+      {
+        "quote": "We securely sent our database of hard-to-reach patients with all their relevant conditions, and the number of patients we wanted to enroll. This platform did all the heavy lifting, including patient outreach and activation.",
+        "author": "Dr. Brian Hodgkins",
+        "title": "Executive Vice President of Clinical Operations",
+        "company": "Desert Oasis Healthcare"
+      },
+      {
+        "quote": "Being able to offer a program that is so engaging and motivating to our members is a game changer. We have seen significant improvements in our members' health outcomes and quality of life.",
+        "author": "Jill Feldman",
+        "title": "Chief Operating Officer",
+        "company": "Health Plan of San Mateo"
+      },
+      {
+        "quote": "After starting our members on this platform, we've seen significant decreases in utilization and improved outcomes. The program more than paid for itself.",
+        "author": "Ian Straayer",
+        "title": "Manager of Quality Improvement",
+        "company": "Priority Health"
+      },
+      {
+        "quote": "Seeing more than 90% of our members engage with this platform daily is a testament to the program's effectiveness. We've seen significant improvements in our members' health outcomes and quality of life.",
+        "author": "Renee Kieffer",
+        "title": "Nurse Practitioner",
+        "company": "Alameda Alliance for Health"
+      }
+    ]
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Let's discuss your needs",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send Message"
+    "title": "Talk to our team",
+    "subtitle": "Learn how Wellth can impact health, cost, and quality outcomes for your organization.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "workEmail": "Work email",
+    "phoneNumber": "Phone number",
+    "message": "How can we help?",
+    "send": "Get in touch"
   }
 } 
