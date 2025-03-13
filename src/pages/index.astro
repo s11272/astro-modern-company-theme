@@ -14,11 +14,21 @@ import ContactForm from '../components/ContactForm.astro';
 <Layout title="Better outcomes with behavioral economics">
   <Hero />
   <KeyMetrics />
-  <Features />
+  <section id="features">
+    <Features />
+  </section>
   <CallOutWithImageLeft />
-  <Partners />
+  <section id="partners">
+    <Partners />
+  </section>
   <CallToAction />
-  <HowItWorks />
-  <Testimonials />
-  <ContactForm />
+  <section id="how-it-works">
+    <HowItWorks />
+  </section>
+  <section id="testimonials">
+    <Testimonials />
+  </section>
+  <section id="contact">
+    <ContactForm />
+  </section>
 </Layout>
