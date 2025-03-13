@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import KeyMetrics from '../../components/KeyMetrics.astro';
+import Features from '../../components/Features.astro';
+import CallOutWithImageLeft from '../../components/CallOutWithImageLeft.astro';
+import Partners from '../../components/Partners.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { ui } from '../../i18n/ui';
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = ui[lang];
+---
+
+<Layout title={t.hero.title}>
+  <Hero />
+  <KeyMetrics />
+  <section id="features">
+    <Features />
+  </section>
+  <CallOutWithImageLeft />
+  <section id="partners">
+    <Partners />
+  </section>
+  <CallToAction />
+  <section id="how-it-works">
+    <HowItWorks />
+  </section>
+  <section id="testimonials">
+    <Testimonials />
+  </section>
+  <section id="contact">
+    <ContactForm />
+  </section>
+</Layout>

@@ -1,14 +1,22 @@
 ---
 import { Image } from 'astro:assets';
 import logoImg from '../assets/logo.png';
+import { ui, languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = ui[lang];
 
 const navItems = [
-  { label: 'Features', href: '#features' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Partners', href: '#partners' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: t.nav.features, href: '#features' },
+  { label: t.nav.howItWorks, href: '#how-it-works' },
+  { label: t.nav.partners, href: '#partners' },
+  { label: t.nav.testimonials, href: '#testimonials' },
+  { label: t.nav.contact, href: '#contact' },
 ];
+
+// Get the current path without the language prefix
+const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\//, '/');
 ---
 
 <header class="bg-white shadow-md">
@@ -30,8 +38,47 @@ const navItems = [
         </a>
       ))}
     </nav>
-    <a href="/#" class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition duration-150 ease-in-out">
-      Contact Us
-    </a>
+    <div class="flex items-center space-x-4">
+      <div class="relative group">
+        <button 
+          class="text-gray-700 hover:text-primary-500 transition duration-150 ease-in-out flex items-center"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {languages[lang]}
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div 
+          class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="language-menu"
+        >
+          {Object.entries(languages).map(([code, name]) => (
+            <a
+              href={`/${code}${currentPath}`}
+              class={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${
+                code === lang ? 'bg-gray-100' : ''
+              }`}
+              role="menuitem"
+            >
+              {name}
+            </a>
+          ))}
+        </div>
+      </div>
+      <a href="/#" class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition duration-150 ease-in-out">
+        {t.nav.contactUs}
+      </a>
+    </div>
   </div>
 </header>
+
+<style>
+  /* Add a small delay before hiding the dropdown */
+  .group:hover .group-hover\:opacity-100 {
+    transition-delay: 100ms;
+  }
+</style>

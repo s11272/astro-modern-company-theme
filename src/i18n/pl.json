@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "features": "Funkcje",
+    "howItWorks": "Jak to działa",
+    "partners": "Partnerzy",
+    "testimonials": "Opinie",
+    "contact": "Kontakt",
+    "contactUs": "Skontaktuj się"
+  },
+  "hero": {
+    "title": "Pierwsza platforma motywacji do codziennej opieki",
+    "subtitle": "Your Company wykorzystuje nauki behawioralne, aby pomóc ludziom tworzyć, ustanawiać i utrzymywać codzienne zachowania, które poprawiają ich życie. Plany zdrowotne odnotowują zmniejszone koszty wykorzystania, znaczące wyniki zdrowotne, zwiększoną jakość i oceny Star.",
+    "videoTitle": "Jak działa Your Co.",
+    "playVideo": "Odtwórz wideo"
+  },
+  "features": {
+    "title": "Codzienne zaangażowanie członków",
+    "subtitle": "Your Company dociera do osób mających trudności z przestrzeganiem planów opieki i motywuje je, nagradzając za zdrowe zachowania.",
+    "features": [
+      { "title": "Przestrzeganie leków" },
+      { "title": "Sprawdzanie wartości klinicznych (A1c, BP)" },
+      { "title": "Używanie urządzeń medycznych" },
+      { "title": "Uczestnictwo w wizytach u lekarza" },
+      { "title": "Wykonywanie badań przesiewowych i laboratoryjnych" }
+    ],
+    "description": "Nasza platforma oparta na nauce jest zbudowana na zasadach ekonomii behawioralnej, aby działać dla najtrudniej dostępnych populacji.",
+    "cta": "Poznaj platformę Your Company"
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Nasz proces"
+  },
+  "partners": {
+    "title": "Nasi Partnerzy",
+    "subtitle": "Zaufali nam liderzy branży"
+  },
+  "testimonials": {
+    "title": "Co mówią nasi klienci",
+    "subtitle": "Historie sukcesu"
+  },
+  "contact": {
+    "title": "Skontaktuj się",
+    "subtitle": "Porozmawiajmy o Twoich potrzebach",
+    "name": "Imię",
+    "email": "Email",
+    "message": "Wiadomość",
+    "send": "Wyślij wiadomość"
+  }
+} 
