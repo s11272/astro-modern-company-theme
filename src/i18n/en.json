@@ -1,7 +1,6 @@
 {
   "nav": {
-    "features": "Features",
-    "howItWorks": "How It Works",
+    "products": "Products",
     "partners": "Partners",
     "testimonials": "Testimonials",
     "contact": "Contact",
@@ -13,10 +12,10 @@
     "videoTitle": "How Your Co. Works",
     "playVideo": "Play Video"
   },
-  "features": {
+  "products": {
     "title": "Daily member engagement",
     "subtitle": "Your Company reaches and motivates individuals struggling to adhere to care plans, rewarding them for healthy behaviors.",
-    "features": [
+    "products": [
       { "title": "Medication Adherence" },
       { "title": "Checking clinical values (A1c, BP)" },
       { "title": "Using medical devices" },
@@ -25,20 +24,6 @@
     ],
     "description": "Our science-backed platform is built on the principles of behavioral economics to work for the hardest-to-reach populations.",
     "cta": "Explore the Your Company platform"
-  },
-  "howItWorks": {
-    "title": "How it works",
-    "steps": [
-      {
-        "description": "We help people with chronic conditions, barriers to accessing healthcare, and distrust of the medical system..."
-      },
-      {
-        "description": "...prioritize their care plans every day by taking medications, monitoring conditions, and getting preventative screenings..."
-      },
-      {
-        "description": "...to help organizations meet and exceed goals for cost, quality, and health outcomes."
-      }
-    ]
   },
   "partners": {
     "title": "Our Partners",

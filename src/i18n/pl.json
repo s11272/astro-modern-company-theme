@@ -1,7 +1,6 @@
 {
   "nav": {
-    "features": "Funkcje",
-    "howItWorks": "Jak to działa",
+    "products": "Produkty",
     "partners": "Partnerzy",
     "testimonials": "Opinie",
     "contact": "Kontakt",
@@ -13,10 +12,10 @@
     "videoTitle": "Jak działa Your Co.",
     "playVideo": "Odtwórz wideo"
   },
-  "features": {
+  "products": {
     "title": "Codzienne zaangażowanie członków",
     "subtitle": "Your Company dociera do osób mających trudności z przestrzeganiem planów opieki i motywuje je, nagradzając za zdrowe zachowania.",
-    "features": [
+    "products": [
       { "title": "Przestrzeganie leków" },
       { "title": "Sprawdzanie wartości klinicznych (A1c, BP)" },
       { "title": "Używanie urządzeń medycznych" },
@@ -25,20 +24,6 @@
     ],
     "description": "Nasza platforma oparta na nauce jest zbudowana na zasadach ekonomii behawioralnej, aby działać dla najtrudniej dostępnych populacji.",
     "cta": "Poznaj platformę Your Company"
-  },
-  "howItWorks": {
-    "title": "Jak to działa",
-    "steps": [
-      {
-        "description": "Pomagamy osobom z chorobami przewlekłymi, barierami w dostępie do opieki zdrowotnej i nieufnością wobec systemu medycznego..."
-      },
-      {
-        "description": "...priorytetyzować ich plany opieki każdego dnia poprzez przyjmowanie leków, monitorowanie stanu zdrowia i wykonywanie badań przesiewowych..."
-      },
-      {
-        "description": "...aby pomóc organizacjom osiągać i przekraczać cele w zakresie kosztów, jakości i wyników zdrowotnych."
-      }
-    ]
   },
   "partners": {
     "title": "Nasi Partnerzy",

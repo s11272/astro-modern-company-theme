@@ -11,14 +11,14 @@ const icons = [FaPills, FaClinicMedical, FaPager, FaCalendarAlt, FaClipboardChec
 
 <section class="bg-blue-700 py-20 text-white text-center">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-serif font-bold mb-4">{t.features.title}</h2>
+    <h2 class="text-4xl font-serif font-bold mb-4">{t.products.title}</h2>
     <p class="text-xl mb-12 max-w-2xl mx-auto">
-      {t.features.subtitle}
+      {t.products.subtitle}
     </p>
 
     <div class="bg-white text-blue-700 rounded-lg shadow-lg p-8">
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-        {t.features.features.map((feature, index) => (
+        {t.products.products.map((feature, index) => (
           <div class="flex flex-col items-center">
             <component is={icons[index]} className="w-16 h-16 mb-4" />
             <p class="text-sm font-semibold">{feature.title}</p>
@@ -28,11 +28,11 @@ const icons = [FaPills, FaClinicMedical, FaPager, FaCalendarAlt, FaClipboardChec
     </div>
 
     <p class="text-xl mt-12 mb-8 max-w-2xl mx-auto">
-      {t.features.description}
+      {t.products.description}
     </p>
 
     <a href="/platform" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300">
-      {t.features.cta}
+      {t.products.cta}
     </a>
   </div>
 </section>

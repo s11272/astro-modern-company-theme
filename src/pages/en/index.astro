@@ -6,7 +6,6 @@ import Features from '../../components/Features.astro';
 import CallOutWithImageLeft from '../../components/CallOutWithImageLeft.astro';
 import Partners from '../../components/Partners.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import HowItWorks from '../../components/HowItWorks.astro';
 import Testimonials from '../../components/Testimonials.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import { ui } from '../../i18n/ui';
@@ -19,7 +18,7 @@ const t = ui[lang];
 <Layout title={t.hero.title}>
   <Hero />
   <KeyMetrics />
-  <section id="features">
+  <section id="products">
     <Features />
   </section>
   <CallOutWithImageLeft />
@@ -27,9 +26,6 @@ const t = ui[lang];
     <Partners />
   </section>
   <CallToAction />
-  <section id="how-it-works">
-    <HowItWorks />
-  </section>
   <section id="testimonials">
     <Testimonials />
   </section>
