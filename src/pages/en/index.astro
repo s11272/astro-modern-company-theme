@@ -10,6 +10,7 @@ import Testimonials from '../../components/Testimonials.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import { ui } from '../../i18n/ui';
 import { getLangFromUrl } from '../../i18n/utils';
+import Services from '../../components/Services.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
@@ -20,6 +21,9 @@ const t = ui[lang];
   <KeyMetrics />
   <section id="products">
     <Products />
+  </section>
+  <section id="services">
+    <Services />
   </section>
   <section id="partners">
     <Partners />
