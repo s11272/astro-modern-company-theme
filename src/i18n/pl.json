@@ -97,5 +97,22 @@
         "description": "Wielkoskalowy tunelowy system śrutowania do przemysłowego przygotowania powierzchni."
       }
     ]
+  },
+  "servicesSection": {
+    "title": "Nasze Usługi",
+    "items": [
+      {
+        "title": "Serwis",
+        "description": "Rozwiązujemy wszelkie problemy i usuwamy awarie. Posiadana przez nas wiedza i doświadczenie pozwalają na szybkie wykonanie zleceń."
+      },
+      {
+        "title": "Konserwacja",
+        "description": "Wykonujemy przeglądy techniczne. Pozwala to na bezawaryjną i wydajną pracę maszyny."
+      },
+      {
+        "title": "Części zamienne",
+        "description": "Zapewniamy wszystkie części zamienne do maszyn do śrutowania od czołowych producentów."
+      }
+    ]
   }
 } 

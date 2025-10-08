@@ -97,5 +97,22 @@
         "description": "Large-scale tunnel shot blasting system for industrial surface preparation."
       }
     ]
+  },
+  "servicesSection": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Repair",
+        "description": "We solve any issues and remove breakdowns. The knowledge and experience we have allow us to get the job done quickly."
+      },
+      {
+        "title": "Maintenance",
+        "description": "We perform technical surveys. This allows for trouble-free and efficient operation of the machine."
+      },
+      {
+        "title": "Spare parts",
+        "description": "We provide all spare parts for shotblasting machines from leading manufacturers."
+      }
+    ]
   }
 } 
