@@ -1,9 +1,9 @@
 {
   "nav": {
     "products": "Produkty",
+    "services": "Usługi",
     "partners": "Partnerzy",
     "testimonials": "Opinie",
-    "contact": "Kontakt",
     "contactUs": "Skontaktuj się z nami"
   },
   "hero": {
