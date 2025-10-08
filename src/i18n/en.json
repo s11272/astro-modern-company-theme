@@ -68,5 +68,34 @@
     "phoneNumber": "Phone number",
     "message": "How can we help?",
     "send": "Get in touch"
+  },
+  "productsSection": {
+    "title": "Our Products",
+    "items": [
+      {
+        "title": "Shot Blasting Machine",
+        "description": "High-performance shot blasting machine for efficient surface preparation and cleaning."
+      },
+      {
+        "title": "Pipes Shot Blasting",
+        "description": "Specialized shot blasting system designed for cleaning and preparing pipe surfaces."
+      },
+      {
+        "title": "Roller Conveyor Shot Blasting",
+        "description": "Automated shot blasting system with roller conveyor for continuous surface treatment."
+      },
+      {
+        "title": "Powder Coating Booth",
+        "description": "State-of-the-art powder coating booth for high-quality surface finishing."
+      },
+      {
+        "title": "Spray Booth",
+        "description": "Professional spray booth system for precise and controlled coating applications."
+      },
+      {
+        "title": "Tunnel Type Shot Blasting",
+        "description": "Large-scale tunnel shot blasting system for industrial surface preparation."
+      }
+    ]
   }
 } 

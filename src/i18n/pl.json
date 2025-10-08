@@ -68,5 +68,34 @@
     "phoneNumber": "Numer telefonu",
     "message": "Jak możemy pomóc?",
     "send": "Skontaktuj się z nami"
+  },
+  "productsSection": {
+    "title": "Nasze Produkty",
+    "items": [
+      {
+        "title": "Maszyna do śrutowania",
+        "description": "Wysokowydajna maszyna do śrutowania do efektywnego przygotowania i czyszczenia powierzchni."
+      },
+      {
+        "title": "Śrutowanie rur",
+        "description": "Specjalistyczny system śrutowania zaprojektowany do czyszczenia i przygotowania powierzchni rur."
+      },
+      {
+        "title": "Tunel z przenośnikiem rolkowym do śrutowania",
+        "description": "Zautomatyzowany system śrutowania z przenośnikiem rolkowym do ciągłej obróbki powierzchni."
+      },
+      {
+        "title": "Kabina do malowania proszkowego",
+        "description": "Nowoczesna kabina do malowania proszkowego zapewniająca wysoką jakość wykończenia powierzchni."
+      },
+      {
+        "title": "Kabina lakiernicza",
+        "description": "Profesjonalna kabina lakiernicza do precyzyjnych i kontrolowanych aplikacji powłok."
+      },
+      {
+        "title": "Tunelowy system śrutowania",
+        "description": "Wielkoskalowy tunelowy system śrutowania do przemysłowego przygotowania powierzchni."
+      }
+    ]
   }
 } 

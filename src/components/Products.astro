@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl } from '../i18n/utils';
 import { ui } from '../i18n/ui';
 
 // Import product images
@@ -14,62 +14,32 @@ import tunnelTypeShotBlasting from '../assets/products/tunnel_type_shot_blasting
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
 
-interface Product {
-  title: string;
-  description: string;
-  image: any; // Using any for now since we're using Astro's Image component
-}
-
-const products: Product[] = [
-  {
-    title: "Shot Blasting Machine",
-    description: "High-performance shot blasting machine for efficient surface preparation and cleaning.",
-    image: shotBlastingMachine
-  },
-  {
-    title: "Pipes Shot Blasting",
-    description: "Specialized shot blasting system designed for cleaning and preparing pipe surfaces.",
-    image: pipesShotBlasting
-  },
-  {
-    title: "Roller Conveyor Shot Blasting",
-    description: "Automated shot blasting system with roller conveyor for continuous surface treatment.",
-    image: rollerConveyorShotBlasting
-  },
-  {
-    title: "Powder Coating Booth",
-    description: "State-of-the-art powder coating booth for high-quality surface finishing.",
-    image: powderCoatingBooth
-  },
-  {
-    title: "Spray Booth",
-    description: "Professional spray booth system for precise and controlled coating applications.",
-    image: sprayBooth
-  },
-  {
-    title: "Tunnel Type Shot Blasting",
-    description: "Large-scale tunnel shot blasting system for industrial surface preparation.",
-    image: tunnelTypeShotBlasting
-  }
+const images = [
+  shotBlastingMachine,
+  pipesShotBlasting,
+  rollerConveyorShotBlasting,
+  powderCoatingBooth,
+  sprayBooth,
+  tunnelTypeShotBlasting,
 ];
 ---
 
 <section class="bg-[#222222] py-20">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-serif font-bold text-center mb-12 text-[#84DCC6]">Our Products</h2>
+    <h2 class="text-4xl font-serif font-bold text-center mb-12 text-[#84DCC6]">{t.productsSection.title}</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {products.map((product) => (
+      {t.productsSection.items.map((item, index) => (
         <div class="bg-[#4B4E6D] rounded-lg shadow-lg overflow-hidden">
           <Image 
-            src={product.image} 
-            alt={product.title}
+            src={images[index]} 
+            alt={item.title}
             width={400}
             height={306}
             class="w-full h-[306px] object-cover"
           />
           <div class="p-6">
-            <h3 class="text-xl font-bold text-[#84DCC6] mb-2">{product.title}</h3>
-            <p class="text-[#95A3B3]">{product.description}</p>
+            <h3 class="text-xl font-bold text-[#84DCC6] mb-2">{item.title}</h3>
+            <p class="text-[#95A3B3]">{item.description}</p>
           </div>
         </div>
       ))}
