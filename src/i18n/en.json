@@ -114,5 +114,12 @@
         "description": "We provide all spare parts for shotblasting machines from leading manufacturers."
       }
     ]
+  },
+  "keyMetrics": {
+    "items": [
+      { "value": "100", "label": "Quality control for every production batch", "symbol": "%" },
+      { "value": "40", "label": "Reduced abrasive material consumption thanks to advanced technology", "symbol": "%" },
+      { "value": "95", "label": "Machines operating without failure during the first 2 years", "symbol": "%" }
+    ]
   }
 } 

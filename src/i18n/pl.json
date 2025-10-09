@@ -114,5 +114,12 @@
         "description": "Zapewniamy wszystkie części zamienne do maszyn do śrutowania od czołowych producentów."
       }
     ]
+  },
+  "keyMetrics": {
+    "items": [
+      { "value": "100", "label": "Kontrola jakości każdej partii produkcyjnej", "symbol": "%" },
+      { "value": "40", "label": "Zmniejszone zużycie ścierniwa dzięki zaawansowanej technologii", "symbol": "%" },
+      { "value": "95", "label": "Maszyny działające bezawaryjnie przez pierwsze 2 lata", "symbol": "%" }
+    ]
   }
 } 

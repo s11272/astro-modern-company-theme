@@ -1,9 +1,10 @@
 ---
-const metrics = [
-  { value: '100', label: 'Quality control for every production batch', symbol: '%' },
-  { value: '40', label: 'Reduced abrasive material consumption thanks to advanced technology', symbol: '%' },
-  { value: '95', label: 'Machines operating without failure during the first 2 years', symbol: '%' },
-];
+import { getLangFromUrl } from '../i18n/utils';
+import { ui } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = ui[lang];
+const metrics = t.keyMetrics.items;
 ---
 
 <section class="bg-gray-100 py-16">
