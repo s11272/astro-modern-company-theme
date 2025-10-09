@@ -1,16 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import logoImg from '../assets/logo.png';
+import { ui } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = ui[lang];
 
 const footerLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'Solution', href: '#' },
-  { label: 'Outcomes', href: '#' },
-  { label: 'Company', href: '#' },
-  { label: 'Resources', href: '#' },
-  { label: 'Careers', href: '#' },
-  { label: 'Contact Us', href: '#' },
-  { label: 'Member Support', href: '#' },
+  { label: t.nav.products, href: '#products' },
+  { label: t.nav.services, href: '#services' },
+  { label: t.nav.partners, href: '#partners' },
+  { label: t.nav.testimonials, href: '#testimonials' },
+  { label: t.nav.contactUs, href: '#contact' },
 ];
 ---
 
