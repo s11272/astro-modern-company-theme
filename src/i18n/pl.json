@@ -121,5 +121,15 @@
       { "value": "40", "label": "Zmniejszone zużycie ścierniwa dzięki zaawansowanej technologii", "symbol": "%" },
       { "value": "95", "label": "Maszyny działające bezawaryjnie przez pierwsze 2 lata", "symbol": "%" }
     ]
+  },
+  "footer": {
+    "companyName": "Blastserv",
+    "companyTagline": "Łączymy technologię, doświadczenie i pasję, aby wynieść jakość obróbki powierzchni na wyższy poziom.",
+    "quickLinks": "Szybkie linki",
+    "stayConnected": "Bądź na bieżąco",
+    "subscribeHint": "Zapisz się do newslettera, aby otrzymywać aktualizacje",
+    "emailPlaceholder": "Twój email",
+    "subscribeCta": "Zapisz się",
+    "copyright": "Wszelkie prawa zastrzeżone."
   }
 } 

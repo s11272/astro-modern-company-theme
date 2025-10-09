@@ -121,5 +121,15 @@
       { "value": "40", "label": "Reduced abrasive material consumption thanks to advanced technology", "symbol": "%" },
       { "value": "95", "label": "Machines operating without failure during the first 2 years", "symbol": "%" }
     ]
+  },
+  "footer": {
+    "companyName": "Blastserv",
+    "companyTagline": "We combine technology, experience, and passion to take surface treatment quality to the next level.",
+    "quickLinks": "Quick Links",
+    "stayConnected": "Stay Connected",
+    "subscribeHint": "Subscribe to our newsletter for updates",
+    "emailPlaceholder": "Your email",
+    "subscribeCta": "Subscribe",
+    "copyright": "All rights reserved."
   }
 } 
