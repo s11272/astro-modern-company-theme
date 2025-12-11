@@ -1,0 +1,131 @@
+:root {
+    /* Header */
+    --header-bg: #F2F2F2;
+    --header-text: #0D0D0D;
+    /* gray-700 */
+    --header-link-hover: #342E59;
+    /* primary-500 */
+    --header-link-text: #374151;
+    --header-contact-button-bg: #0D0D0D;
+    --header-contact-button-text: #F2F2F2;
+    --header-contact-button-hover-bg: #1E2940;
+    /* primary-600 */
+    --header-language-active-bg: #f3f4f6;
+    /* gray-100 */
+    --header-language-text: #374151;
+
+    /* Hero */
+    --hero-section-bg: #1E2940;
+    --hero-title-text: #D9D9D9;
+    --hero-description-text: #D9D9D9;
+    --hero-video-modal-bg: #4B4E6D;
+    --hero-video-modal-title-text: #84DCC6;
+    --hero-video-modal-close-icon: #D9D9D9;
+    --hero-video-modal-close-icon-hover: #84DCC6;
+
+    /* Products */
+    --products-section-bg: #101726;
+    --products-section-title: #F2F2F2;
+    --products-card-bg: #1E2940;
+    --products-card-title: #F2F2F2;
+    --products-card-description: #D9D9D9;
+
+    /* Footer */
+    --footer-bg: #101726;
+    /* gray-900 */
+    --footer-text: #F2F2F2;
+    --footer-title: #F2F2F2;
+    /* inherited or white */
+    --footer-link-text: #F2F2F2;
+    --footer-link-hover: #84DCC6;
+    /* primary-300 approx */
+    --footer-border: #374151;
+    /* gray-700 */
+    --footer-subscribe-input-text: #111827;
+    /* gray-900 */
+    --footer-subscribe-button-bg: #1E2940;
+    /* primary-500 */
+    --footer-subscribe-button-text: #ffffff;
+    --footer-subscribe-button-hover-bg: #68B09F;
+    /* primary-600 */
+    --footer-social-icon: #9ca3af;
+    /* gray-400 */
+    --footer-social-icon-hover: #ffffff;
+
+    /* Contact Form */
+    --contact-bg: #f5f5f4;
+    /* stone-100 */
+    --contact-title-text: #1f2937;
+    /* gray-800 */
+    --contact-subtitle-text: #4b5563;
+    /* gray-600 */
+    --contact-label-text: #374151;
+    /* gray-700 */
+    --contact-input-bg: #ffffff;
+    --contact-input-border: #d1d5db;
+    /* gray-300 */
+    --contact-input-focus-ring: #22c55e;
+    /* green-500 */
+    --contact-input-focus-border: #22c55e;
+    /* green-500 */
+    --contact-submit-bg: #0D0D0D;
+    --contact-submit-text: #ffffff;
+    --contact-submit-hover-bg: #0D0D0D;
+    --contact-submit-focus-ring: #0D0D0D;
+
+    /* Services */
+    --services-bg: #101726;
+    --services-title-text: #F2F2F2;
+    --services-card-bg: #1E2940;
+    --services-card-title: #D9D9D9;
+    --services-card-description: #D9D9D9;
+
+    /* Testimonials */
+    --testimonials-bg: #F2F2F2;
+    /* gray-100 */
+    --testimonials-title-text: #000000;
+    --testimonials-card-bg: #ffffff;
+    --testimonials-quote-text: #4b5563;
+    /* gray-600 */
+    --testimonials-author-text: #000000;
+    --testimonials-role-text: #6b7280;
+    /* gray-500 */
+
+    /* Partners */
+    --partners-bg: #ffffff;
+    --partners-title-text: #000000;
+
+    /* Call To Action */
+    --cta-section-bg: #16a34a;
+    /* green-600 */
+    --cta-card-bg: #ffffff;
+    --cta-title-text: #16a34a;
+    --cta-text: #374151;
+    /* gray-700 */
+
+    /* Features */
+    --features-section-bg: #1d4ed8;
+    /* blue-700 */
+    --features-title-text: #ffffff;
+    --features-text: #ffffff;
+    --features-card-bg: #ffffff;
+    --features-card-text: #1d4ed8;
+    /* blue-700 */
+    --features-button-bg: #ffffff;
+    --features-button-text: #1d4ed8;
+    --features-button-hover-bg: #dbeafe;
+    /* blue-100 */
+
+    /* Key Metrics */
+    --key-metrics-bg: #D9D9D9;
+    --key-metrics-value-text: #0D0D0D;
+    --key-metrics-label-text: #374151;
+    /* gray-700 */
+
+    /* Callout */
+    --callout-bg: #ffffff;
+    --callout-title-text: #111827;
+    /* gray-900 */
+    --callout-text: #374151;
+    /* gray-700 */
+}

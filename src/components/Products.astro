@@ -1,15 +1,15 @@
 ---
-import { Image } from 'astro:assets';
-import { getLangFromUrl } from '../i18n/utils';
-import { ui } from '../i18n/ui';
+import { Image } from "astro:assets";
+import { getLangFromUrl } from "../i18n/utils";
+import { ui } from "../i18n/ui";
 
 // Import product images
-import shotBlastingMachine from '../assets/products/shot_blasting_machine.jpeg';
-import pipesShotBlasting from '../assets/products/pipes_shot_blasting.jpeg';
-import rollerConveyorShotBlasting from '../assets/products/roller_conveyor_shot_blasting.jpg';
-import powderCoatingBooth from '../assets/products/powder_coating.jpeg';
-import sprayBooth from '../assets/products/spray_booth.jpeg';
-import tunnelTypeShotBlasting from '../assets/products/tunnel_type_shot_blasting.jpg';
+import shotBlastingMachine from "../assets/products/shot_blasting_machine.jpeg";
+import pipesShotBlasting from "../assets/products/pipes_shot_blasting.jpeg";
+import rollerConveyorShotBlasting from "../assets/products/roller_conveyor_shot_blasting.jpg";
+import powderCoatingBooth from "../assets/products/powder_coating.jpeg";
+import sprayBooth from "../assets/products/spray_booth.jpeg";
+import tunnelTypeShotBlasting from "../assets/products/tunnel_type_shot_blasting.jpg";
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
@@ -24,25 +24,35 @@ const images = [
 ];
 ---
 
-<section class="bg-[#222222] py-20">
+<section class="bg-[var(--products-section-bg)] py-20">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-serif font-bold text-center mb-12 text-[#84DCC6]">{t.productsSection.title}</h2>
+    <h2
+      class="text-4xl font-serif font-bold text-center mb-12 text-[var(--products-section-title)]"
+    >
+      {t.productsSection.title}
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {t.productsSection.items.map((item, index) => (
-        <div class="bg-[#4B4E6D] rounded-lg shadow-lg overflow-hidden">
-          <Image 
-            src={images[index]} 
-            alt={item.title}
-            width={400}
-            height={306}
-            class="w-full h-[306px] object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-[#84DCC6] mb-2">{item.title}</h3>
-            <p class="text-[#95A3B3]">{item.description}</p>
+      {
+        t.productsSection.items.map((item, index) => (
+          <div class="bg-[var(--products-card-bg)] rounded-lg shadow-lg overflow-hidden">
+            <Image
+              src={images[index]}
+              alt={item.title}
+              width={400}
+              height={306}
+              class="w-full h-[306px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[var(--products-card-title)] mb-2">
+                {item.title}
+              </h3>
+              <p class="text-[var(--products-card-description)]">
+                {item.description}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>

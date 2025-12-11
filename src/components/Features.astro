@@ -1,29 +1,47 @@
 ---
-import { FaPills, FaClinicMedical, FaPager, FaCalendarAlt, FaClipboardCheck } from 'react-icons/fa';
-import { ui } from '../i18n/ui';
-import { getLangFromUrl } from '../i18n/utils';
+import {
+  FaPills,
+  FaClinicMedical,
+  FaPager,
+  FaCalendarAlt,
+  FaClipboardCheck,
+} from "react-icons/fa";
+import { ui } from "../i18n/ui";
+import { getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
 
-const icons = [FaPills, FaClinicMedical, FaPager, FaCalendarAlt, FaClipboardCheck];
+const icons = [
+  FaPills,
+  FaClinicMedical,
+  FaPager,
+  FaCalendarAlt,
+  FaClipboardCheck,
+];
 ---
 
-<section class="bg-blue-700 py-20 text-white text-center">
+<section
+  class="bg-[var(--features-section-bg)] py-20 text-[var(--features-text)] text-center"
+>
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-serif font-bold mb-4">{t.products.title}</h2>
     <p class="text-xl mb-12 max-w-2xl mx-auto">
       {t.products.subtitle}
     </p>
 
-    <div class="bg-white text-blue-700 rounded-lg shadow-lg p-8">
+    <div
+      class="bg-[var(--features-card-bg)] text-[var(--features-card-text)] rounded-lg shadow-lg p-8"
+    >
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-        {t.products.products.map((feature, index) => (
-          <div class="flex flex-col items-center">
-            <component is={icons[index]} className="w-16 h-16 mb-4" />
-            <p class="text-sm font-semibold">{feature.title}</p>
-          </div>
-        ))}
+        {
+          t.products.products.map((feature, index) => (
+            <div class="flex flex-col items-center">
+              <component is={icons[index]} className="w-16 h-16 mb-4" />
+              <p class="text-sm font-semibold">{feature.title}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
 
@@ -31,7 +49,10 @@ const icons = [FaPills, FaClinicMedical, FaPager, FaCalendarAlt, FaClipboardChec
       {t.products.description}
     </p>
 
-    <a href="/platform" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300">
+    <a
+      href="/platform"
+      class="inline-block bg-[var(--features-button-bg)] text-[var(--features-button-text)] font-bold py-3 px-8 rounded-full hover:bg-[var(--features-button-hover-bg)] transition duration-300"
+    >
       {t.products.cta}
     </a>
   </div>

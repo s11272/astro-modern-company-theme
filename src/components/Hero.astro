@@ -1,28 +1,30 @@
 ---
-import { Image } from 'astro:assets';
-import heroImg from '../assets/hero-image.png';
-import { ui } from '../i18n/ui';
-import { getLangFromUrl } from '../i18n/utils';
+import { Image } from "astro:assets";
+import heroImg from "../assets/hero-image.png";
+import { ui } from "../i18n/ui";
+import { getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
 ---
 
-<section class="bg-[#222222] py-20">
+<section class="bg-[var(--hero-section-bg)] py-20">
   <div class="container mx-auto px-4">
     <div class="flex flex-col lg:flex-row items-center">
       <div class="lg:w-1/2 lg:pr-12">
-        <h1 class="text-5xl lg:text-6xl font-serif font-bold text-[#84DCC6] mb-6">
+        <h1
+          class="text-5xl lg:text-6xl font-serif font-bold text-[var(--hero-title-text)] mb-6"
+        >
           {t.hero.title}
         </h1>
-        <p class="text-xl text-[#95A3B3] mb-8">
+        <p class="text-xl text-[var(--hero-description-text)] mb-8">
           {t.hero.subtitle}
         </p>
       </div>
       <div class="lg:w-1/2 mt-10 lg:mt-0 relative">
-        <Image 
-          src={heroImg} 
-          alt="Happy family" 
+        <Image
+          src={heroImg}
+          alt="Happy family"
           class="rounded-lg shadow-xl"
           width={600}
           height={400}
@@ -33,48 +35,73 @@ const t = ui[lang];
 </section>
 
 <!-- Video Modal -->
-<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
-  <div class="bg-[#4B4E6D] rounded-lg p-8 max-w-3xl w-full">
+<div
+  id="videoModal"
+  class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden"
+>
+  <div class="bg-[var(--hero-video-modal-bg)] rounded-lg p-8 max-w-3xl w-full">
     <div class="flex justify-between items-center mb-4">
-      <h3 class="text-2xl font-bold text-[#84DCC6]">{t.hero.videoTitle}</h3>
-      <button id="closeModal" class="text-[#95A3B3] hover:text-[#84DCC6]">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      <h3 class="text-2xl font-bold text-[var(--hero-video-modal-title-text)]">
+        {t.hero.videoTitle}
+      </h3>
+      <button
+        id="closeModal"
+        class="text-[var(--hero-video-modal-close-icon)] hover:text-[var(--hero-video-modal-close-icon-hover)]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
     </div>
     <div class="aspect-w-16 aspect-h-9">
-      <iframe 
+      <iframe
         id="youtubeVideo"
         class="w-full h-full"
         src="https://www.youtube.com/embed/f4D55v97wLM"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
     </div>
   </div>
 </div>
 
 <script>
   // components/Hero.astro
-  const playButton = document.getElementById('playButton');
-  const videoModal = document.getElementById('videoModal');
-  const closeModal = document.getElementById('closeModal');
-  const youtubeVideo = document.getElementById('youtubeVideo') as HTMLIFrameElement;
+  const playButton = document.getElementById("playButton");
+  const videoModal = document.getElementById("videoModal");
+  const closeModal = document.getElementById("closeModal");
+  const youtubeVideo = document.getElementById(
+    "youtubeVideo",
+  ) as HTMLIFrameElement;
 
-  playButton?.addEventListener('click', () => {
-    videoModal?.classList.remove('hidden');
+  playButton?.addEventListener("click", () => {
+    videoModal?.classList.remove("hidden");
   });
 
-  closeModal?.addEventListener('click', () => {
-    videoModal?.classList.add('hidden');
-    youtubeVideo.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  closeModal?.addEventListener("click", () => {
+    videoModal?.classList.add("hidden");
+    youtubeVideo.contentWindow?.postMessage(
+      '{"event":"command","func":"pauseVideo","args":""}',
+      "*",
+    );
   });
 
-  videoModal?.addEventListener('click', (e) => {
+  videoModal?.addEventListener("click", (e) => {
     if (e.target === videoModal) {
-      videoModal.classList.add('hidden');
-      youtubeVideo.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      videoModal.classList.add("hidden");
+      youtubeVideo.contentWindow?.postMessage(
+        '{"event":"command","func":"pauseVideo","args":""}',
+        "*",
+      );
     }
   });
 </script>

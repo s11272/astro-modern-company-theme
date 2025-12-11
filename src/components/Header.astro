@@ -1,73 +1,92 @@
 ---
-import { Image } from 'astro:assets';
-import logoImg from '../assets/logo.png';
-import { ui, languages } from '../i18n/ui';
-import { getLangFromUrl } from '../i18n/utils';
+import { Image } from "astro:assets";
+import logoImg from "../assets/logo.png";
+import { ui, languages } from "../i18n/ui";
+import { getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
 
 const navItems = [
-  { label: t.nav.products, href: '#products' },
-  { label: t.nav.services, href: '#services' },
-  { label: t.nav.partners, href: '#partners' },
-  { label: t.nav.testimonials, href: '#testimonials' },
+  { label: t.nav.products, href: "#products" },
+  { label: t.nav.services, href: "#services" },
+  { label: t.nav.partners, href: "#partners" },
+  { label: t.nav.testimonials, href: "#testimonials" },
 ];
 
 // Get the current path without the language prefix
-const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\//, '/');
+const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}\//, "/");
 ---
 
-<header class="bg-white shadow-md">
+<header class="bg-[var(--header-bg)] shadow-md">
   <div class="container mx-auto px-4 py-6 flex justify-between items-center">
     <a href="/" class="flex items-center">
-      <Image 
-        src={logoImg} 
-        alt="Company Logo Image" 
+      <Image
+        src={logoImg}
+        alt="Company Logo Image"
         class="rounded-lg"
         width={425}
         height={52}
       />
     </a>
     <nav class="hidden md:flex space-x-6 items-center">
-      {navItems.map(item => (
-        <a href={item.href} class="text-gray-700 hover:text-primary-500 transition duration-150 ease-in-out">
-          {item.label}
-        </a>
-      ))}
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-[var(--header-text)] hover:text-[var(--header-link-hover)] transition duration-150 ease-in-out"
+          >
+            {item.label}
+          </a>
+        ))
+      }
     </nav>
     <div class="flex items-center space-x-4">
       <div class="relative group">
-        <button 
-          class="text-gray-700 hover:text-primary-500 transition duration-150 ease-in-out flex items-center"
+        <button
+          class="text-[var(--header-text)] hover:text-[var(--header-link-hover)] transition duration-150 ease-in-out flex items-center"
           aria-haspopup="true"
           aria-expanded="false"
         >
           {languages[lang]}
-          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <svg
+            class="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div 
+        <div
           class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="language-menu"
         >
-          {Object.entries(languages).map(([code, name]) => (
-            <a
-              href={`/${code}${currentPath}`}
-              class={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ${
-                code === lang ? 'bg-gray-100' : ''
-              }`}
-              role="menuitem"
-            >
-              {name}
-            </a>
-          ))}
+          {
+            Object.entries(languages).map(([code, name]) => (
+              <a
+                href={`/${code}${currentPath}`}
+                class={`block px-4 py-2 text-sm text-[var(--header-language-text)] hover:bg-[var(--header-language-active-bg)] ${
+                  code === lang ? "bg-[var(--header-language-active-bg)]" : ""
+                }`}
+                role="menuitem"
+              >
+                {name}
+              </a>
+            ))
+          }
         </div>
       </div>
-      <a href="#contact" class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition duration-150 ease-in-out">
+      <a
+        href="#contact"
+        class="bg-[var(--header-contact-button-bg)] text-[var(--header-contact-button-text)] px-4 py-2 rounded hover:bg-[var(--header-contact-button-hover-bg)] transition duration-150 ease-in-out"
+      >
         {t.nav.contactUs}
       </a>
     </div>

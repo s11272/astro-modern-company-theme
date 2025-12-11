@@ -1,25 +1,25 @@
 ---
-import { Image } from 'astro:assets';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import { ui } from '../i18n/ui';
+import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { ui } from "../i18n/ui";
 
-import bba from '../assets/logos/bba.png';
-import bgh from '../assets/logos/bgh.png';
-import bp from '../assets/logos/bp.png';
-import brisko from '../assets/logos/brisko.png';
-import buhler from '../assets/logos/buhler.png';
-import diem from '../assets/logos/diem.png';
-import gerling from '../assets/logos/gerling.png';
-import icteam from '../assets/logos/icteam.png';
-import lp from '../assets/logos/lp.png';
-import maw from '../assets/logos/maw.png';
-import nash from '../assets/logos/nash.png';
+import bba from "../assets/logos/bba.png";
+import bgh from "../assets/logos/bgh.png";
+import bp from "../assets/logos/bp.png";
+import brisko from "../assets/logos/brisko.png";
+import buhler from "../assets/logos/buhler.png";
+import diem from "../assets/logos/diem.png";
+import gerling from "../assets/logos/gerling.png";
+import icteam from "../assets/logos/icteam.png";
+import lp from "../assets/logos/lp.png";
+import maw from "../assets/logos/maw.png";
+import nash from "../assets/logos/nash.png";
 
-import neujahr from '../assets/logos/neujahr.png';
-import rcoatings from '../assets/logos/rcoatings.png';
-import techinpro from '../assets/logos/techinpro.png';
-import tmgroup from '../assets/logos/tmgroup.png';
-import wiphos from '../assets/logos/wiphos.png';
+import neujahr from "../assets/logos/neujahr.png";
+import rcoatings from "../assets/logos/rcoatings.png";
+import techinpro from "../assets/logos/techinpro.png";
+import tmgroup from "../assets/logos/tmgroup.png";
+import wiphos from "../assets/logos/wiphos.png";
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
@@ -45,21 +45,27 @@ const partners = [
 ];
 ---
 
-<section class="bg-white py-20">
+<section class="bg-[var(--partners-bg)] py-20">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-serif font-bold text-center mb-12">{t.partners.title}</h2>
+    <h2
+      class="text-3xl font-serif font-bold text-center mb-12 text-[var(--partners-title-text)]"
+    >
+      {t.partners.title}
+    </h2>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-      {partners.map((partner) => (
-        <div class="flex items-center justify-center">
-          <Image 
-            src={partner.logo} 
-            alt={partner.name} 
-            class="rounded-lg"
-            width={220}
-            height={220}
-          />
-        </div>
-      ))}
+      {
+        partners.map((partner) => (
+          <div class="flex items-center justify-center">
+            <Image
+              src={partner.logo}
+              alt={partner.name}
+              class="rounded-lg"
+              width={220}
+              height={220}
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
