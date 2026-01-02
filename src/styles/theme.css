@@ -1,4 +1,8 @@
 :root {
+    /* Global Accents */
+    --accent: #342E59;
+    --accent-hover: #1E2940;
+
     /* Header */
     --header-bg: #F2F2F2;
     --header-text: #0D0D0D;
@@ -15,7 +19,7 @@
     --header-language-text: #374151;
 
     /* Hero */
-    --hero-section-bg: #1E2940;
+    --hero-section-bg: #101726;
     --hero-title-text: #D9D9D9;
     --hero-description-text: #D9D9D9;
     --hero-video-modal-bg: #4B4E6D;
@@ -128,4 +132,15 @@
     /* gray-900 */
     --callout-text: #374151;
     /* gray-700 */
+
+    /* Product Detail Page */
+    --product-detail-bg: #F2F2F2;
+    --product-detail-title: #0D0D0D;
+    --product-detail-description: #342E59;
+    --product-detail-text: #374151;
+    --product-detail-card-bg: #ffffff;
+    --product-detail-border: #d1d5db;
+    --product-detail-button-bg: #0D0D0D;
+    --product-detail-button-text: #ffffff;
+    --product-detail-button-hover-bg: #342E59;
 }

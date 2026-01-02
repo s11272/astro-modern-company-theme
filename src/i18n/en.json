@@ -16,11 +16,21 @@
     "title": "Daily member engagement",
     "subtitle": "Your Company reaches and motivates individuals struggling to adhere to care plans, rewarding them for healthy behaviors.",
     "products": [
-      { "title": "Medication Adherence" },
-      { "title": "Checking clinical values (A1c, BP)" },
-      { "title": "Using medical devices" },
-      { "title": "Attending provider appointments" },
-      { "title": "Getting screenings and labs" }
+      {
+        "title": "Medication Adherence"
+      },
+      {
+        "title": "Checking clinical values (A1c, BP)"
+      },
+      {
+        "title": "Using medical devices"
+      },
+      {
+        "title": "Attending provider appointments"
+      },
+      {
+        "title": "Getting screenings and labs"
+      }
     ],
     "description": "Our science-backed platform is built on the principles of behavioral economics to work for the hardest-to-reach populations.",
     "cta": "Explore the Your Company platform"
@@ -73,28 +83,136 @@
     "title": "Our Products",
     "items": [
       {
+        "slug": "shot-blasting-machine",
         "title": "Shot Blasting Machine",
-        "description": "High-performance shot blasting machine for efficient surface preparation and cleaning."
+        "description": "High-performance shot blasting machine for efficient surface preparation and cleaning.",
+        "details": {
+          "fullDescription": "Our Shot Blasting Machines are engineered for maximum efficiency and durability. They are ideal for removing rust, scale, and other contaminants from metal surfaces, providing a perfect profile for subsequent coating or painting. Featuring advanced abrasive recycling systems and robust construction, these machines ensure cost-effective operation and long service life.",
+          "specifications": [
+            {
+              "label": "Blasting Width",
+              "value": "1000mm"
+            },
+            {
+              "label": "Motor Power",
+              "value": "15kW"
+            },
+            {
+              "label": "Abrasive Consumption",
+              "value": "Low"
+            }
+          ]
+        }
       },
       {
+        "slug": "pipes-shot-blasting",
         "title": "Pipes Shot Blasting",
-        "description": "Specialized shot blasting system designed for cleaning and preparing pipe surfaces."
+        "description": "Specialized shot blasting system designed for cleaning and preparing pipe surfaces.",
+        "details": {
+          "fullDescription": "Specifically designed for the internal and external cleaning of pipes, our Pipe Shot Blasting systems provide uniform surface preparation. They can handle various pipe diameters and lengths, ensuring that every inch is treated to perfection. These systems are essential for industries like oil & gas, water distribution, and construction.",
+          "specifications": [
+            {
+              "label": "Pipe Diameter Range",
+              "value": "50mm - 1200mm"
+            },
+            {
+              "label": "Conveyor Speed",
+              "value": "0.5 - 5 m/min"
+            },
+            {
+              "label": "Blast Wheels",
+              "value": "Multiple configuration available"
+            }
+          ]
+        }
       },
       {
+        "slug": "roller-conveyor-shot-blasting",
         "title": "Roller Conveyor Shot Blasting",
-        "description": "Automated shot blasting system with roller conveyor for continuous surface treatment."
+        "description": "Automated shot blasting system with roller conveyor for continuous surface treatment.",
+        "details": {
+          "fullDescription": "The Roller Conveyor Shot Blasting system is the workhorse of industrial surface preparation. It allows for the continuous treatment of plates, beams, and large structural components. The automated process ensures consistent quality and high throughput, making it ideal for large-scale manufacturing and fabrication plants.",
+          "specifications": [
+            {
+              "label": "Max Workpiece Width",
+              "value": "2500mm"
+            },
+            {
+              "label": "Blast Wheel Power",
+              "value": "22kW x 4"
+            },
+            {
+              "label": "Dust Collector Efficiency",
+              "value": "99.9%"
+            }
+          ]
+        }
       },
       {
+        "slug": "powder-coating-booth",
         "title": "Powder Coating Booth",
-        "description": "State-of-the-art powder coating booth for high-quality surface finishing."
+        "description": "State-of-the-art powder coating booth for high-quality surface finishing.",
+        "details": {
+          "fullDescription": "Our Powder Coating Booths offer a clean and controlled environment for applying high-quality finishes. Designed for maximum powder recovery and easy color changes, they help reduce waste and increase productivity. The advanced filtration systems ensure a safe working environment and meet all environmental regulations.",
+          "specifications": [
+            {
+              "label": "Airflow",
+              "value": "Laminar"
+            },
+            {
+              "label": "Recovery System",
+              "value": "Cyclone or Filter"
+            },
+            {
+              "label": "Lighting",
+              "value": "Explosion-proof LED"
+            }
+          ]
+        }
       },
       {
+        "slug": "spray-booth",
         "title": "Spray Booth",
-        "description": "Professional spray booth system for precise and controlled coating applications."
+        "description": "Professional spray booth system for precise and controlled coating applications.",
+        "details": {
+          "fullDescription": "Achieve professional-grade finishes with our advanced Spray Booths. Whether you are using wet paints or specialized coatings, our booths provide the perfect conditions for a flawless application. Features include precision temperature control, efficient exhaust systems, and high-intensity lighting for detailed work.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "Customizable"
+            },
+            {
+              "label": "Temperature Range",
+              "value": "Ambient to 80°C"
+            },
+            {
+              "label": "Air Exchange Rate",
+              "value": "High performance"
+            }
+          ]
+        }
       },
       {
+        "slug": "tunnel-type-shot-blasting",
         "title": "Tunnel Type Shot Blasting",
-        "description": "Large-scale tunnel shot blasting system for industrial surface preparation."
+        "description": "Large-scale tunnel shot blasting system for industrial surface preparation.",
+        "details": {
+          "fullDescription": "The Tunnel Type Shot Blasting machine is designed for high-volume, continuous processing of complex workpieces. Its tunnel configuration allows for seamless integration into production lines. This machine is particularly effective for heavy castings, forgings, and large steel constructions, providing thorough cleaning from all angles.",
+          "specifications": [
+            {
+              "label": "Throughput",
+              "value": "High volume"
+            },
+            {
+              "label": "Automation",
+              "value": "Fully integrated PLC"
+            },
+            {
+              "label": "Maintenance",
+              "value": "Easy access panels"
+            }
+          ]
+        }
       }
     ]
   },
@@ -117,9 +235,21 @@
   },
   "keyMetrics": {
     "items": [
-      { "value": "100", "label": "Quality control for every production batch", "symbol": "%" },
-      { "value": "40", "label": "Reduced abrasive material consumption thanks to advanced technology", "symbol": "%" },
-      { "value": "95", "label": "Machines operating without failure during the first 2 years", "symbol": "%" }
+      {
+        "value": "100",
+        "label": "Quality control for every production batch",
+        "symbol": "%"
+      },
+      {
+        "value": "40",
+        "label": "Reduced abrasive material consumption thanks to advanced technology",
+        "symbol": "%"
+      },
+      {
+        "value": "95",
+        "label": "Machines operating without failure during the first 2 years",
+        "symbol": "%"
+      }
     ]
   },
   "footer": {
@@ -132,4 +262,4 @@
     "subscribeCta": "Subscribe",
     "copyright": "All rights reserved."
   }
-} 
+}
