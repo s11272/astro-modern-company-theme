@@ -34,21 +34,32 @@ const images = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
         t.productsSection.items.map((item, index) => (
-          <div class="bg-[var(--products-card-bg)] rounded-lg shadow-lg overflow-hidden">
-            <Image
-              src={images[index]}
-              alt={item.title}
-              width={400}
-              height={306}
-              class="w-full h-[306px] object-cover"
-            />
-            <div class="p-6">
+          <div class="bg-[var(--products-card-bg)] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-transform hover:-translate-y-2">
+            <a
+              href={`/${lang}/products/${item.slug}`}
+              class="block flex-shrink-0"
+            >
+              <Image
+                src={images[index]}
+                alt={item.title}
+                width={400}
+                height={306}
+                class="w-full h-[306px] object-cover"
+              />
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-xl font-bold text-[var(--products-card-title)] mb-2">
                 {item.title}
               </h3>
-              <p class="text-[var(--products-card-description)]">
+              <p class="text-[var(--products-card-description)] mb-6 flex-grow">
                 {item.description}
               </p>
+              <a
+                href={`/${lang}/products/${item.slug}`}
+                class="inline-block text-[var(--accent)] font-bold hover:underline"
+              >
+                {lang === "pl" ? "Zobacz szczegóły" : "View details"} &rarr;
+              </a>
             </div>
           </div>
         ))
