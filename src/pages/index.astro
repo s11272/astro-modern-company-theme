@@ -7,17 +7,16 @@
     <head>
         <meta charset="UTF-8" />
         <title>Blastserv</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
     </head>
     <body>
         <p
+            id="status"
             style="text-align: center; margin-top: 50px; font-family: sans-serif;"
         >
             Loading...
         </p>
-
-        <!-- Load Netlify Identity widget first -->
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        ></script>
 
         <script is:inline>
             // Check for Netlify Identity tokens in URL hash
@@ -28,16 +27,20 @@
                 hash.indexOf("recovery_token") !== -1;
 
             if (hasToken) {
-                // Token found - wait for widget to be ready, then open modal
+                document.getElementById("status").textContent =
+                    "Setting up your account...";
+
+                // Wait for widget to load
                 function waitForIdentity() {
                     if (window.netlifyIdentity) {
+                        // Set up login handler
                         window.netlifyIdentity.on("login", function () {
                             window.location.href = "/admin/";
                         });
-                        // The widget auto-detects tokens in hash and opens the modal
-                        window.netlifyIdentity.init();
+
+                        // Open the modal - widget will auto-detect token from URL
+                        window.netlifyIdentity.open();
                     } else {
-                        // Widget not loaded yet, wait and retry
                         setTimeout(waitForIdentity, 100);
                     }
                 }
