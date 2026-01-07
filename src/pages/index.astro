@@ -1,5 +1,5 @@
 ---
-// No server-side redirect - client handles token detection and redirect
+// No server-side logic - all handled client-side
 ---
 
 <!doctype html>
@@ -7,30 +7,44 @@
     <head>
         <meta charset="UTF-8" />
         <title>Blastserv</title>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        ></script>
     </head>
     <body>
-        <p style="text-align: center; margin-top: 50px;">Loading...</p>
+        <p
+            style="text-align: center; margin-top: 50px; font-family: sans-serif;"
+        >
+            Loading...
+        </p>
+
+        <!-- Load Netlify Identity widget first -->
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
+
         <script is:inline>
             // Check for Netlify Identity tokens in URL hash
-            var hash = window.location.hash;
+            var hash = window.location.hash || "";
             var hasToken =
-                hash.includes("invite_token") ||
-                hash.includes("confirmation_token") ||
-                hash.includes("recovery_token");
+                hash.indexOf("invite_token") !== -1 ||
+                hash.indexOf("confirmation_token") !== -1 ||
+                hash.indexOf("recovery_token") !== -1;
 
-            if (hasToken && window.netlifyIdentity) {
-                // Token found - open Identity widget for password setup
-                window.netlifyIdentity.on("init", function () {
-                    window.netlifyIdentity.on("login", function () {
-                        window.location.href = "/admin/";
-                    });
-                });
-                window.netlifyIdentity.open();
+            if (hasToken) {
+                // Token found - wait for widget to be ready, then open modal
+                function waitForIdentity() {
+                    if (window.netlifyIdentity) {
+                        window.netlifyIdentity.on("login", function () {
+                            window.location.href = "/admin/";
+                        });
+                        // The widget auto-detects tokens in hash and opens the modal
+                        window.netlifyIdentity.init();
+                    } else {
+                        // Widget not loaded yet, wait and retry
+                        setTimeout(waitForIdentity, 100);
+                    }
+                }
+                waitForIdentity();
             } else {
                 // No token - redirect to Polish homepage
-                window.location.href = "/pl/";
+                window.location.replace("/pl/");
             }
         </script>
     </body>
