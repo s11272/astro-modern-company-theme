@@ -1,15 +1,5 @@
 ---
-// Check if this is a Netlify Identity callback (has token in URL)
-const url = Astro.url;
-const hasIdentityToken =
-    url.search.includes("invite_token") ||
-    url.search.includes("confirmation_token") ||
-    url.search.includes("recovery_token");
-
-// Only do server-side redirect if NOT an identity callback
-if (!hasIdentityToken) {
-    return Astro.redirect("/pl/", 301);
-}
+// No server-side redirect - client handles token detection and redirect
 ---
 
 <!doctype html>
@@ -21,24 +11,25 @@ if (!hasIdentityToken) {
         ></script>
     </head>
     <body>
-        <p>Processing...</p>
+        <p style="text-align: center; margin-top: 50px;">Loading...</p>
         <script is:inline>
-            // Process identity tokens, then redirect
-            if (window.netlifyIdentity) {
+            // Check for Netlify Identity tokens in URL hash
+            var hash = window.location.hash;
+            var hasToken =
+                hash.includes("invite_token") ||
+                hash.includes("confirmation_token") ||
+                hash.includes("recovery_token");
+
+            if (hasToken && window.netlifyIdentity) {
+                // Token found - open Identity widget for password setup
                 window.netlifyIdentity.on("init", function () {
                     window.netlifyIdentity.on("login", function () {
-                        document.location.href = "/admin/";
+                        window.location.href = "/admin/";
                     });
                 });
-                // Open the identity modal for token handling
-                var urlHash = window.location.hash;
-                if (urlHash) {
-                    window.netlifyIdentity.open();
-                } else {
-                    // No token, redirect to Polish version
-                    window.location.href = "/pl/";
-                }
+                window.netlifyIdentity.open();
             } else {
+                // No token - redirect to Polish homepage
                 window.location.href = "/pl/";
             }
         </script>
