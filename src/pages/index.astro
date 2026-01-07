@@ -1,7 +1,6 @@
 ---
 // Check if this is a Netlify Identity callback (has token in URL)
 const url = Astro.url;
-const hash = url.hash || "";
 const hasIdentityToken =
     url.search.includes("invite_token") ||
     url.search.includes("confirmation_token") ||
@@ -23,17 +22,17 @@ if (!hasIdentityToken) {
     </head>
     <body>
         <p>Processing...</p>
-        <script>
+        <script is:inline>
             // Process identity tokens, then redirect
             if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", (user) => {
-                    window.netlifyIdentity.on("login", () => {
+                window.netlifyIdentity.on("init", function () {
+                    window.netlifyIdentity.on("login", function () {
                         document.location.href = "/admin/";
                     });
                 });
                 // Open the identity modal for token handling
-                const hash = window.location.hash;
-                if (hash) {
+                var urlHash = window.location.hash;
+                if (urlHash) {
                     window.netlifyIdentity.open();
                 } else {
                     // No token, redirect to Polish version
