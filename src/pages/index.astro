@@ -1,3 +1,47 @@
 ---
-return Astro.redirect('/pl/', 301);
---- 
+// Check if this is a Netlify Identity callback (has token in URL)
+const url = Astro.url;
+const hash = url.hash || "";
+const hasIdentityToken =
+    url.search.includes("invite_token") ||
+    url.search.includes("confirmation_token") ||
+    url.search.includes("recovery_token");
+
+// Only do server-side redirect if NOT an identity callback
+if (!hasIdentityToken) {
+    return Astro.redirect("/pl/", 301);
+}
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Blastserv</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
+    </head>
+    <body>
+        <p>Processing...</p>
+        <script>
+            // Process identity tokens, then redirect
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                });
+                // Open the identity modal for token handling
+                const hash = window.location.hash;
+                if (hash) {
+                    window.netlifyIdentity.open();
+                } else {
+                    // No token, redirect to Polish version
+                    window.location.href = "/pl/";
+                }
+            } else {
+                window.location.href = "/pl/";
+            }
+        </script>
+    </body>
+</html>
