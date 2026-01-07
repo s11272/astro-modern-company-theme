@@ -1,0 +1,321 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Enables the Netlify Identity widget for login
+local_backend: true
+
+# Media files stored in src/assets/products
+media_folder: "src/assets/products"
+public_folder: "/src/assets/products"
+
+# Collections define the content types editable in the CMS
+collections:
+  # English Products
+  - name: "products-en"
+    label: "Products (English)"
+    files:
+      - name: "en-i18n"
+        label: "English Content"
+        file: "src/i18n/en.json"
+        format: json
+        fields:
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Products", name: "products", widget: "string" }
+              - { label: "Services", name: "services", widget: "string" }
+              - { label: "Partners", name: "partners", widget: "string" }
+              - { label: "Testimonials", name: "testimonials", widget: "string" }
+              - { label: "Contact Us", name: "contactUs", widget: "string" }
+          
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Video Title", name: "videoTitle", widget: "string" }
+              - { label: "Play Video Text", name: "playVideo", widget: "string" }
+          
+          - label: "Products Preview"
+            name: "products"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - label: "Products List"
+                name: "products"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "CTA Text", name: "cta", widget: "string" }
+          
+          - label: "Partners Section"
+            name: "partners"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          
+          - label: "Testimonials Section"
+            name: "testimonials"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Testimonials"
+                name: "testimonials"
+                widget: "list"
+                fields:
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Author", name: "author", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Company", name: "company", widget: "string" }
+          
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "First Name Label", name: "firstName", widget: "string" }
+              - { label: "Last Name Label", name: "lastName", widget: "string" }
+              - { label: "Work Email Label", name: "workEmail", widget: "string" }
+              - { label: "Phone Number Label", name: "phoneNumber", widget: "string" }
+              - { label: "Message Label", name: "message", widget: "string" }
+              - { label: "Send Button Text", name: "send", widget: "string" }
+          
+          - label: "Products Section"
+            name: "productsSection"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - label: "Products"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Slug (URL path)", name: "slug", widget: "string", hint: "URL-friendly name, e.g. 'shot-blasting-machine'" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Short Description", name: "description", widget: "text" }
+                  - label: "Details"
+                    name: "details"
+                    widget: "object"
+                    fields:
+                      - { label: "Full Description", name: "fullDescription", widget: "text" }
+                      - label: "Specifications"
+                        name: "specifications"
+                        widget: "list"
+                        fields:
+                          - { label: "Label", name: "label", widget: "string" }
+                          - { label: "Value", name: "value", widget: "string" }
+          
+          - label: "Services Section"
+            name: "servicesSection"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Services"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          
+          - label: "Key Metrics"
+            name: "keyMetrics"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Metrics"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Symbol", name: "symbol", widget: "string", required: false }
+          
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Company Name", name: "companyName", widget: "string" }
+              - { label: "Company Tagline", name: "companyTagline", widget: "text" }
+              - { label: "Quick Links Label", name: "quickLinks", widget: "string" }
+              - { label: "Stay Connected Label", name: "stayConnected", widget: "string" }
+              - { label: "Subscribe Hint", name: "subscribeHint", widget: "string" }
+              - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Subscribe CTA", name: "subscribeCta", widget: "string" }
+              - { label: "Copyright Text", name: "copyright", widget: "string" }
+
+  # Polish Products
+  - name: "products-pl"
+    label: "Products (Polish)"
+    files:
+      - name: "pl-i18n"
+        label: "Polish Content"
+        file: "src/i18n/pl.json"
+        format: json
+        fields:
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Products", name: "products", widget: "string" }
+              - { label: "Services", name: "services", widget: "string" }
+              - { label: "Partners", name: "partners", widget: "string" }
+              - { label: "Testimonials", name: "testimonials", widget: "string" }
+              - { label: "Contact Us", name: "contactUs", widget: "string" }
+          
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Video Title", name: "videoTitle", widget: "string" }
+              - { label: "Play Video Text", name: "playVideo", widget: "string" }
+          
+          - label: "Products Preview"
+            name: "products"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - label: "Products List"
+                name: "products"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "CTA Text", name: "cta", widget: "string" }
+          
+          - label: "Partners Section"
+            name: "partners"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          
+          - label: "Testimonials Section"
+            name: "testimonials"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Testimonials"
+                name: "testimonials"
+                widget: "list"
+                fields:
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Author", name: "author", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Company", name: "company", widget: "string" }
+          
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "First Name Label", name: "firstName", widget: "string" }
+              - { label: "Last Name Label", name: "lastName", widget: "string" }
+              - { label: "Work Email Label", name: "workEmail", widget: "string" }
+              - { label: "Phone Number Label", name: "phoneNumber", widget: "string" }
+              - { label: "Message Label", name: "message", widget: "string" }
+              - { label: "Send Button Text", name: "send", widget: "string" }
+          
+          - label: "Products Section"
+            name: "productsSection"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - label: "Products"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Slug (URL path)", name: "slug", widget: "string", hint: "URL-friendly name, e.g. 'shot-blasting-machine'" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Short Description", name: "description", widget: "text" }
+                  - label: "Details"
+                    name: "details"
+                    widget: "object"
+                    fields:
+                      - { label: "Full Description", name: "fullDescription", widget: "text" }
+                      - label: "Specifications"
+                        name: "specifications"
+                        widget: "list"
+                        fields:
+                          - { label: "Label", name: "label", widget: "string" }
+                          - { label: "Value", name: "value", widget: "string" }
+          
+          - label: "Services Section"
+            name: "servicesSection"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Services"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          
+          - label: "Key Metrics"
+            name: "keyMetrics"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Metrics"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Symbol", name: "symbol", widget: "string", required: false }
+          
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Company Name", name: "companyName", widget: "string" }
+              - { label: "Company Tagline", name: "companyTagline", widget: "text" }
+              - { label: "Quick Links Label", name: "quickLinks", widget: "string" }
+              - { label: "Stay Connected Label", name: "stayConnected", widget: "string" }
+              - { label: "Subscribe Hint", name: "subscribeHint", widget: "string" }
+              - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Subscribe CTA", name: "subscribeCta", widget: "string" }
+              - { label: "Copyright Text", name: "copyright", widget: "string" }
+
+  # Product Images
+  - name: "product-images"
+    label: "Product Images"
+    folder: "src/assets/products"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    extension: ""
+    format: frontmatter
+    identifier_field: name
+    summary: "{{filename}}"
+    files: []
