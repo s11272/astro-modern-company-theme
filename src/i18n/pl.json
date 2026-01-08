@@ -1,4 +1,74 @@
 {
+  "nav": {
+    "products": "Produkty",
+    "services": "Usługi",
+    "partners": "Partnerzy",
+    "testimonials": "Opinie",
+    "contactUs": "Skontaktuj się z nami"
+  },
+  "hero": {
+    "title": "Kim jesteśmy i co robimy?",
+    "subtitle": "BLASTSERV – jesteśmy młodym i dynamicznym zespołem z pasją, który od lat działa w branży obróbki strumieniowo-ściernej i malowania. W naszej ofercie znajdują się maszyny do ręcznego i automatycznego procesu śrutowania, malowania na mokro i proszkowego, a także suszarnie i piece. Chętnie odpowiemy na wszelkie pytania i udzielimy fachowych porad.",
+    "videoTitle": "Jak działa Your Co.",
+    "playVideo": "Odtwórz wideo"
+  },
+  "products": {
+    "title": "Codzienne zaangażowanie członków",
+    "subtitle": "Your Company dociera do osób mających trudności z przestrzeganiem planów opieki i motywuje je, nagradzając za zdrowe zachowania.",
+    "products": [
+      {
+        "title": "Przestrzeganie leków"
+      },
+      {
+        "title": "Sprawdzanie wartości klinicznych (A1c, BP)"
+      },
+      {
+        "title": "Używanie urządzeń medycznych"
+      },
+      {
+        "title": "Uczestnictwo w wizytach u lekarzy"
+      },
+      {
+        "title": "Wykonywanie badań przesiewowych i laboratoryjnych"
+      }
+    ],
+    "description": "Nasza platforma oparta na nauce jest zbudowana na zasadach ekonomii behawioralnej, aby działać dla najtrudniej dostępnych populacji.",
+    "cta": "Poznaj platformę Your Company"
+  },
+  "partners": {
+    "title": "Nasi Partnerzy",
+    "subtitle": "Zaufali nam liderzy branży"
+  },
+  "testimonials": {
+    "title": "Co mówią nasi klienci",
+    "subtitle": "Historie sukcesu",
+    "testimonials": [
+      {
+        "quote": "Bezpiecznie przesłaliśmy naszą bazę danych trudno dostępnych pacjentów wraz ze wszystkimi ich istotnymi schorzeniami i liczbą pacjentów, których chcieliśmy zapisać. Ta platforma wykonała całą ciężką pracę, w tym dotarcie do pacjentów i ich aktywację.",
+        "author": "Dr Brian Hodgkins",
+        "title": "Wiceprezes ds. Operacji Klinicznych",
+        "company": "Desert Oasis Healthcare"
+      },
+      {
+        "quote": "Możliwość zaoferowania programu, który jest tak angażujący i motywujący dla naszych członków, to przełom. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
+        "author": "Jill Feldman",
+        "title": "Dyrektor Operacyjny",
+        "company": "Health Plan of San Mateo"
+      },
+      {
+        "quote": "Po rozpoczęciu przez naszych członków korzystania z tej platformy zaobserwowaliśmy znaczące zmniejszenie wykorzystania i poprawę wyników. Program więcej niż się zwrócił.",
+        "author": "Ian Straayer",
+        "title": "Kierownik ds. Poprawy Jakości",
+        "company": "Priority Health"
+      },
+      {
+        "quote": "Widzenie ponad 90% naszych członków angażujących się w tę platformę codziennie jest świadectwem skuteczności programu. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
+        "author": "Renee Kieffer",
+        "title": "Praktykujący Pielęgniarz",
+        "company": "Alameda Alliance for Health"
+      }
+    ]
+  },
   "contact": {
     "title": "Porozmawiaj z naszym zespołem",
     "subtitle": "Dowiedz się, jak Wellth może wpłynąć na wyniki zdrowotne, koszty i jakość dla Twojej organizacji.",
@@ -102,7 +172,7 @@
       },
       {
         "slug": "spray-booth",
-        "title": "Kabina lakierniczax",
+        "title": "Kabina lakiernicza",
         "description": "Profesjonalna kabina lakiernicza do precyzyjnych i kontrolowanych aplikacji powłok.",
         "details": {
           "fullDescription": "Osiągnij profesjonalną jakość wykończenia dzięki naszym zaawansowanym kabinom lakierniczym. Niezależnie od tego, czy używasz farb mokrych, czy specjalistycznych powłok, nasze kabiny zapewniają idealne warunki do bezbłędnej aplikacji. Funkcje obejmują precyzyjną kontrolę temperatury, wydajne systemy wyciągowe i intensywne oświetlenie ułatwiające pracę nad detalami.",
@@ -123,31 +193,45 @@
         }
       },
       {
-        "slug": "ostatni-produkt",
-        "title": "Ostatni Produkt",
-        "description": "Szybki opis",
+        "slug": "tunnel-type-shot-blasting",
+        "title": "Tunelowy system śrutowania",
+        "description": "Wielkoskalowy tunelowy system śrutowania do przemysłowego przygotowania powierzchni.",
         "details": {
-          "fullDescription": "jeszcze szybszy opis",
+          "fullDescription": "Tunelowa maszyna do śrutowania jest przeznaczona do wysokonakładowej, ciągłej obróbki złożonych elementów. Jej tunelowa konfiguracja pozwala na bezproblemową integrację z liniami produkcyjnymi. Maszyna ta jest szczególnie skuteczna w przypadku ciężkich odlewów, odkuwek i dużych konstrukcji stalowych, zapewniając dokładne czyszczenie ze wszystkich stron.",
           "specifications": [
             {
-              "label": "taki taki",
-              "value": "1000"
+              "label": "Przepustowość",
+              "value": "Wysoki wolumen"
             },
             {
-              "label": "drugi",
-              "value": "2000"
+              "label": "Automatyzacja",
+              "value": "W pełni zintegrowany sterownik PLC"
+            },
+            {
+              "label": "Konserwacja",
+              "value": "Panele ułatwiające dostęp"
             }
           ]
         }
       }
     ]
   },
-  "nav": {
-    "products": "Produkty",
-    "services": "Usługi",
-    "partners": "Partnerzy",
-    "testimonials": "Opinie",
-    "contactUs": "Skontaktuj się z nami"
+  "servicesSection": {
+    "title": "Nasze Usługi",
+    "items": [
+      {
+        "title": "Serwis",
+        "description": "Rozwiązujemy wszelkie problemy i usuwamy awarie. Posiadana przez nas wiedza i doświadczenie pozwalają na szybkie wykonanie zleceń."
+      },
+      {
+        "title": "Konserwacja",
+        "description": "Wykonujemy przeglądy techniczne. Pozwala to na bezawaryjną i wydajną pracę maszyny."
+      },
+      {
+        "title": "Części zamienne",
+        "description": "Zapewniamy wszystkie części zamienne do maszyn do śrutowania od czołowych producentów."
+      }
+    ]
   },
   "keyMetrics": {
     "items": [
@@ -167,86 +251,6 @@
         "symbol": "%"
       }
     ]
-  },
-  "products": {
-    "title": "Codzienne zaangażowanie członków",
-    "subtitle": "Your Company dociera do osób mających trudności z przestrzeganiem planów opieki i motywuje je, nagradzając za zdrowe zachowania.",
-    "products": [
-      {
-        "title": "Przestrzeganie leków"
-      },
-      {
-        "title": "Sprawdzanie wartości klinicznych (A1c, BP)"
-      },
-      {
-        "title": "Używanie urządzeń medycznych"
-      },
-      {
-        "title": "Uczestnictwo w wizytach u lekarzy"
-      },
-      {
-        "title": "Wykonywanie badań przesiewowych i laboratoryjnych"
-      }
-    ],
-    "description": "Nasza platforma oparta na nauce jest zbudowana na zasadach ekonomii behawioralnej, aby działać dla najtrudniej dostępnych populacji.",
-    "cta": "Poznaj platformę Your Company"
-  },
-  "servicesSection": {
-    "title": "Nasze Usługi",
-    "items": [
-      {
-        "title": "Serwis",
-        "description": "Rozwiązujemy wszelkie problemy i usuwamy awarie. Posiadana przez nas wiedza i doświadczenie pozwalają na szybkie wykonanie zleceń."
-      },
-      {
-        "title": "Konserwacja",
-        "description": "Wykonujemy przeglądy techniczne. Pozwala to na bezawaryjną i wydajną pracę maszyny."
-      },
-      {
-        "title": "Części zamienne",
-        "description": "Zapewniamy wszystkie części zamienne do maszyn do śrutowania od czołowych producentów."
-      }
-    ]
-  },
-  "partners": {
-    "title": "Nasi Partnerzy",
-    "subtitle": "Zaufali nam liderzy branży"
-  },
-  "testimonials": {
-    "title": "Co mówią nasi klienci",
-    "subtitle": "Historie sukcesu",
-    "testimonials": [
-      {
-        "quote": "Bezpiecznie przesłaliśmy naszą bazę danych trudno dostępnych pacjentów wraz ze wszystkimi ich istotnymi schorzeniami i liczbą pacjentów, których chcieliśmy zapisać. Ta platforma wykonała całą ciężką pracę, w tym dotarcie do pacjentów i ich aktywację.",
-        "author": "Dr Brian Hodgkins",
-        "title": "Wiceprezes ds. Operacji Klinicznych",
-        "company": "Desert Oasis Healthcare"
-      },
-      {
-        "quote": "Możliwość zaoferowania programu, który jest tak angażujący i motywujący dla naszych członków, to przełom. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
-        "author": "Jill Feldman",
-        "title": "Dyrektor Operacyjny",
-        "company": "Health Plan of San Mateo"
-      },
-      {
-        "quote": "Po rozpoczęciu przez naszych członków korzystania z tej platformy zaobserwowaliśmy znaczące zmniejszenie wykorzystania i poprawę wyników. Program więcej niż się zwrócił.",
-        "author": "Ian Straayer",
-        "title": "Kierownik ds. Poprawy Jakości",
-        "company": "Priority Health"
-      },
-      {
-        "quote": "Widzenie ponad 90% naszych członków angażujących się w tę platformę codziennie jest świadectwem skuteczności programu. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
-        "author": "Renee Kieffer",
-        "title": "Praktykujący Pielęgniarz",
-        "company": "Alameda Alliance for Health"
-      }
-    ]
-  },
-  "hero": {
-    "title": "Kim jesteśmy i co robimy?",
-    "subtitle": "BLASTSERV – jesteśmy młodym i dynamicznym zespołem z pasją, który od lat działa w branży obróbki strumieniowo-ściernej i malowania. W naszej ofercie znajdują się maszyny do ręcznego i automatycznego procesu śrutowania, malowania na mokro i proszkowego, a także suszarnie i piece. Chętnie odpowiemy na wszelkie pytania i udzielimy fachowych porad.",
-    "videoTitle": "Jak działa Your Co.",
-    "playVideo": "Odtwórz wideo"
   },
   "footer": {
     "companyName": "Blastserv",
