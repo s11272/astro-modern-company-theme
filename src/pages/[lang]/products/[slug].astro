@@ -43,7 +43,8 @@ const imageMap: Record<string, any> = {
     "tunnel-type-shot-blasting": tunnelTypeShotBlasting,
 };
 
-const mainImage = imageMap[product.slug];
+// Use mapped image or fallback to default
+const mainImage = imageMap[product.slug] || shotBlastingMachine;
 const gallery = [gallery1, gallery2, gallery3, gallery4];
 ---
 

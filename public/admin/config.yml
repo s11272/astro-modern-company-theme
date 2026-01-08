@@ -2,9 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-# Enables the Netlify Identity widget for login
-local_backend: true
-
 # Media files stored in src/assets/products
 media_folder: "src/assets/products"
 public_folder: "/src/assets/products"
