@@ -123,28 +123,6 @@
         }
       },
       {
-        "slug": "tunnel-type-shot-blasting",
-        "title": "Tunelowy system śrutowania",
-        "description": "Wielkoskalowy tunelowy system śrutowania do przemysłowego przygotowania powierzchni.",
-        "details": {
-          "fullDescription": "Tunelowa maszyna do śrutowania jest przeznaczona do wysokonakładowej, ciągłej obróbki złożonych elementów. Jej tunelowa konfiguracja pozwala na bezproblemową integrację z liniami produkcyjnymi. Maszyna ta jest szczególnie skuteczna w przypadku ciężkich odlewów, odkuwek i dużych konstrukcji stalowych, zapewniając dokładne czyszczenie ze wszystkich stron.",
-          "specifications": [
-            {
-              "label": "Przepustowość",
-              "value": "Wysoki wolumen"
-            },
-            {
-              "label": "Automatyzacja",
-              "value": "W pełni zintegrowany sterownik PLC"
-            },
-            {
-              "label": "Konserwacja",
-              "value": "Panele ułatwiające dostęp"
-            }
-          ]
-        }
-      },
-      {
         "slug": "ostatni-produkt",
         "title": "Ostatni Produkt",
         "description": "Szybki opis",
