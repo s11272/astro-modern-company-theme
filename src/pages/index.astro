@@ -1,5 +1,5 @@
 ---
-// No server-side logic - all handled client-side
+// Redirect to appropriate page based on URL hash
 ---
 
 <!doctype html>
@@ -7,100 +7,27 @@
     <head>
         <meta charset="UTF-8" />
         <title>Blastserv</title>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        ></script>
-        <style>
-            body {
-                font-family:
-                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                    sans-serif;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                margin: 0;
-                background: #f5f5f5;
-            }
-            #status {
-                margin-bottom: 20px;
-                color: #333;
-            }
-            .fallback-btn {
-                background: #00ad9f;
-                color: white;
-                border: none;
-                padding: 12px 24px;
-                border-radius: 6px;
-                cursor: pointer;
-                font-size: 16px;
-                display: none;
-            }
-            .fallback-btn:hover {
-                background: #008f84;
-            }
-        </style>
     </head>
     <body>
-        <p id="status">Loading...</p>
-        <button id="fallback" class="fallback-btn" onclick="tryOpenModal()"
-            >Click here to set up your account</button
+        <p
+            style="text-align: center; margin-top: 50px; font-family: sans-serif;"
         >
+            Redirecting...
+        </p>
 
         <script is:inline>
+            // Check for Netlify Identity tokens in URL hash
             var hash = window.location.hash || "";
             var hasToken =
                 hash.indexOf("invite_token") !== -1 ||
                 hash.indexOf("confirmation_token") !== -1 ||
                 hash.indexOf("recovery_token") !== -1;
 
-            function tryOpenModal() {
-                if (window.netlifyIdentity) {
-                    window.netlifyIdentity.open();
-                }
-            }
-
             if (hasToken) {
-                document.getElementById("status").textContent =
-                    "Setting up your account...";
-
-                function initIdentity() {
-                    if (window.netlifyIdentity) {
-                        // Initialize the widget first
-                        window.netlifyIdentity.init({
-                            container: document.body,
-                        });
-
-                        // Set up login handler
-                        window.netlifyIdentity.on("login", function (user) {
-                            document.getElementById("status").textContent =
-                                "Success! Redirecting...";
-                            window.location.href = "/admin/";
-                        });
-
-                        window.netlifyIdentity.on("error", function (err) {
-                            document.getElementById("status").textContent =
-                                "Error: " + err.message;
-                            document.getElementById("fallback").style.display =
-                                "block";
-                        });
-
-                        // Small delay to ensure widget is ready, then open
-                        setTimeout(function () {
-                            window.netlifyIdentity.open();
-                            // Show fallback button after a delay in case modal doesn't appear
-                            setTimeout(function () {
-                                document.getElementById(
-                                    "fallback",
-                                ).style.display = "block";
-                            }, 2000);
-                        }, 500);
-                    } else {
-                        setTimeout(initIdentity, 100);
-                    }
-                }
-                initIdentity();
+                // Redirect to admin page WITH the hash - admin handles tokens properly
+                window.location.replace("/admin/" + hash);
             } else {
+                // No token - redirect to Polish homepage
                 window.location.replace("/pl/");
             }
         </script>
