@@ -2,9 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
-# Media files stored in src/assets/products
-media_folder: "src/assets/products"
-public_folder: "/src/assets/products"
+# Media files stored in public/products for CMS uploads
+media_folder: "public/products"
+public_folder: "/products"
 
 # Collections define the content types editable in the CMS
 collections:
@@ -103,6 +103,7 @@ collections:
                 fields:
                   - { label: "Slug (URL path)", name: "slug", widget: "string", hint: "URL-friendly name, e.g. 'shot-blasting-machine'" }
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Product Image", name: "image", widget: "image", required: true, hint: "Main product image" }
                   - { label: "Short Description", name: "description", widget: "text" }
                   - label: "Details"
                     name: "details"
@@ -251,6 +252,7 @@ collections:
                 fields:
                   - { label: "Slug (URL path)", name: "slug", widget: "string", hint: "URL-friendly name, e.g. 'shot-blasting-machine'" }
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Product Image", name: "image", widget: "image", required: true, hint: "Main product image" }
                   - { label: "Short Description", name: "description", widget: "text" }
                   - label: "Details"
                     name: "details"

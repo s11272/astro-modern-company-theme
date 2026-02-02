@@ -2,20 +2,6 @@
 import { ui, languages } from "../../../i18n/ui";
 import ProductLayout from "../../../layouts/ProductLayout.astro";
 
-// Import images
-import shotBlastingMachine from "../../../assets/products/shot_blasting_machine.jpeg";
-import pipesShotBlasting from "../../../assets/products/pipes_shot_blasting.jpeg";
-import rollerConveyorShotBlasting from "../../../assets/products/roller_conveyor_shot_blasting.jpg";
-import powderCoatingBooth from "../../../assets/products/powder_coating.jpeg";
-import sprayBooth from "../../../assets/products/spray_booth.jpeg";
-import tunnelTypeShotBlasting from "../../../assets/products/tunnel_type_shot_blasting.jpg";
-
-// Gallery images
-import gallery1 from "../../../assets/products/industrial_blasting_process_1_1767358950636.png";
-import gallery2 from "../../../assets/products/industrial_painting_booth_1_1767358963147.png";
-import gallery3 from "../../../assets/products/powder_coating_detail_1_1767358977031.png";
-import gallery4 from "../../../assets/products/metallic_surface_preparation_1_1767358991702.png";
-
 export async function getStaticPaths() {
     const paths = [];
 
@@ -32,20 +18,21 @@ export async function getStaticPaths() {
     return paths;
 }
 
-const { product, lang } = Astro.props;
+const { product } = Astro.props;
 
-const imageMap: Record<string, any> = {
-    "shot-blasting-machine": shotBlastingMachine,
-    "pipes-shot-blasting": pipesShotBlasting,
-    "roller-conveyor-shot-blasting": rollerConveyorShotBlasting,
-    "powder-coating-booth": powderCoatingBooth,
-    "spray-booth": sprayBooth,
-    "tunnel-type-shot-blasting": tunnelTypeShotBlasting,
-};
+// Default image if product doesn't have one
+const defaultImage = "/products/shot_blasting_machine.jpeg";
+const mainImage = product.image || defaultImage;
 
-// Use mapped image or fallback to default
-const mainImage = imageMap[product.slug] || shotBlastingMachine;
-const gallery = [gallery1, gallery2, gallery3, gallery4];
+// Gallery images - these are still static for now
+// To make gallery dynamic, add a gallery field to the product in CMS
+const defaultGallery = [
+    "/products/shot_blasting_machine.jpeg",
+    "/products/pipes_shot_blasting.jpeg",
+    "/products/powder_coating.jpeg",
+    "/products/spray_booth.jpeg",
+];
+const gallery = product.gallery || defaultGallery;
 ---
 
 <ProductLayout product={product} mainImage={mainImage} gallery={gallery} />

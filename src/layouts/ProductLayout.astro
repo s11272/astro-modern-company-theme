@@ -1,6 +1,5 @@
 ---
 import Layout from "./Layout.astro";
-import { Image } from "astro:assets";
 import { getLangFromUrl } from "../i18n/utils";
 import { ui } from "../i18n/ui";
 
@@ -13,8 +12,8 @@ interface Props {
             specifications: { label: string; value: string }[];
         };
     };
-    mainImage: any;
-    gallery: any[];
+    mainImage: string;
+    gallery: string[];
 }
 
 const { product, mainImage, gallery } = Astro.props;
@@ -31,21 +30,23 @@ const t = ui[lang];
                     <div
                         class="bg-[var(--product-detail-card-bg)] rounded-2xl overflow-hidden shadow-2xl mb-6"
                     >
-                        <Image
+                        <img
                             id="main-product-image"
                             src={mainImage}
                             alt={product.title}
                             class="w-full h-[500px] object-cover transition-opacity duration-300"
+                            loading="lazy"
                         />
                     </div>
                     <div class="grid grid-cols-4 gap-4">
                         {
                             gallery.map((img, index) => (
                                 <div class="gallery-thumbnail-container bg-[var(--product-detail-card-bg)] rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-80 transition-all border-2 border-transparent">
-                                    <Image
+                                    <img
                                         src={img}
                                         alt={`${product.title} gallery ${index + 1}`}
                                         class="gallery-thumbnail w-full h-24 object-cover"
+                                        loading="lazy"
                                     />
                                 </div>
                             ))

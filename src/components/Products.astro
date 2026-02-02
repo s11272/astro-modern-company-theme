@@ -1,36 +1,12 @@
 ---
-import { Image } from "astro:assets";
 import { getLangFromUrl } from "../i18n/utils";
 import { ui } from "../i18n/ui";
-
-// Import product images - mapped by slug
-import shotBlastingMachine from "../assets/products/shot_blasting_machine.jpeg";
-import pipesShotBlasting from "../assets/products/pipes_shot_blasting.jpeg";
-import rollerConveyorShotBlasting from "../assets/products/roller_conveyor_shot_blasting.jpg";
-import powderCoatingBooth from "../assets/products/powder_coating.jpeg";
-import sprayBooth from "../assets/products/spray_booth.jpeg";
-import tunnelTypeShotBlasting from "../assets/products/tunnel_type_shot_blasting.jpg";
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
 
-// Map images by product slug for CMS compatibility
-const imagesBySlug: Record<string, ImageMetadata> = {
-  "shot-blasting-machine": shotBlastingMachine,
-  "pipes-shot-blasting": pipesShotBlasting,
-  "roller-conveyor-shot-blasting": rollerConveyorShotBlasting,
-  "powder-coating-booth": powderCoatingBooth,
-  "spray-booth": sprayBooth,
-  "tunnel-type-shot-blasting": tunnelTypeShotBlasting,
-};
-
-// Default/placeholder image for products without a mapped image
-const defaultImage = shotBlastingMachine;
-
-// Get image for a product, with fallback
-function getProductImage(slug: string): ImageMetadata {
-  return imagesBySlug[slug] || defaultImage;
-}
+// Default placeholder image path
+const defaultImage = "/products/shot_blasting_machine.jpeg";
 ---
 
 <section class="bg-[var(--products-section-bg)] py-20">
@@ -48,12 +24,13 @@ function getProductImage(slug: string): ImageMetadata {
               href={`/${lang}/products/${item.slug}`}
               class="block flex-shrink-0"
             >
-              <Image
-                src={getProductImage(item.slug)}
+              <img
+                src={item.image || defaultImage}
                 alt={item.title}
-                width={400}
-                height={306}
+                width="400"
+                height="306"
                 class="w-full h-[306px] object-cover"
+                loading="lazy"
               />
             </a>
             <div class="p-6 flex flex-col flex-grow">
