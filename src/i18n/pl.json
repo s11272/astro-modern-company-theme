@@ -149,21 +149,6 @@
             }
           ]
         }
-      },
-      {
-        "slug": "testowy-produkt",
-        "title": "Testowy produkt do wyświetlenia",
-        "image": "/products/adobecolor-ui_ux.jpeg",
-        "description": "krótki opis",
-        "details": {
-          "fullDescription": "długi opis",
-          "specifications": [
-            {
-              "label": "ważna wartość",
-              "value": "1000"
-            }
-          ]
-        }
       }
     ]
   },
