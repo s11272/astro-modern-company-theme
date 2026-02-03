@@ -89,6 +89,12 @@ collections:
                   - { label: "Slug (URL path)", name: "slug", widget: "string", hint: "URL-friendly name, e.g. 'shot-blasting-machine'" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Product Image", name: "image", widget: "image", required: true, hint: "Main product image" }
+                  - label: "Gallery Images"
+                    name: "gallery"
+                    widget: "list"
+                    required: false
+                    hint: "Additional images for product gallery"
+                    field: { label: "Image", name: "image", widget: "image" }
                   - { label: "Short Description", name: "description", widget: "text" }
                   - label: "Details"
                     name: "details"
@@ -223,6 +229,12 @@ collections:
                   - { label: "Slug (URL path)", name: "slug", widget: "string", hint: "URL-friendly name, e.g. 'shot-blasting-machine'" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Product Image", name: "image", widget: "image", required: true, hint: "Main product image" }
+                  - label: "Gallery Images"
+                    name: "gallery"
+                    widget: "list"
+                    required: false
+                    hint: "Additional images for product gallery"
+                    field: { label: "Image", name: "image", widget: "image" }
                   - { label: "Short Description", name: "description", widget: "text" }
                   - label: "Details"
                     name: "details"

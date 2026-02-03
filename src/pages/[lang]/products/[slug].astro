@@ -24,13 +24,8 @@ const { product } = Astro.props;
 const defaultImage = "/products/shot_blasting_machine.jpeg";
 const mainImage = product.image || defaultImage;
 
-// Gallery images - static for now, uses same images for all products
-const gallery = [
-    "/products/shot_blasting_machine.jpeg",
-    "/products/pipes_shot_blasting.jpeg",
-    "/products/powder_coating.jpeg",
-    "/products/spray_booth.jpeg",
-];
+// Gallery images - from product data or fallback to main image
+const gallery = product.gallery || [mainImage];
 ---
 
 <ProductLayout product={product} mainImage={mainImage} gallery={gallery} />
