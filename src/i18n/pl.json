@@ -129,7 +129,7 @@
       },
       {
         "slug": "tunnel-type-shot-blasting",
-        "title": "Tunelowy system śrutowaniaa",
+        "title": "Tunelowy system śrutowania",
         "image": "/products/tunnel_type_shot_blasting.jpg",
         "description": "Wielkoskalowy tunelowy system śrutowania do przemysłowego przygotowania powierzchni.",
         "details": {
@@ -148,6 +148,15 @@
               "value": "Panele ułatwiające dostęp"
             }
           ]
+        }
+      },
+      {
+        "slug": "testowy-produkt",
+        "title": "Testowy produkt do wyświetlenia",
+        "image": "/products/adobecolor-ui_ux.jpeg",
+        "description": "krótki opis",
+        "details": {
+          "fullDescription": "długi opis"
         }
       }
     ]
