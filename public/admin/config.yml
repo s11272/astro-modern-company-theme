@@ -38,21 +38,6 @@ collections:
               - { label: "Video Title", name: "videoTitle", widget: "string" }
               - { label: "Play Video Text", name: "playVideo", widget: "string" }
           
-          - label: "Products Preview"
-            name: "products"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "text" }
-              - label: "Products List"
-                name: "products"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "CTA Text", name: "cta", widget: "string" }
-          
           - label: "Partners Section"
             name: "partners"
             widget: "object"
@@ -186,21 +171,6 @@ collections:
               - { label: "Subtitle", name: "subtitle", widget: "text" }
               - { label: "Video Title", name: "videoTitle", widget: "string" }
               - { label: "Play Video Text", name: "playVideo", widget: "string" }
-          
-          - label: "Products Preview"
-            name: "products"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "text" }
-              - label: "Products List"
-                name: "products"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "CTA Text", name: "cta", widget: "string" }
           
           - label: "Partners Section"
             name: "partners"
