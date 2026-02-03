@@ -178,29 +178,6 @@
       }
     ]
   },
-  "products": {
-    "title": "Codzienne zaangażowanie członków",
-    "subtitle": "Your Company dociera do osób mających trudności z przestrzeganiem planów opieki i motywuje je, nagradzając za zdrowe zachowania.",
-    "products": [
-      {
-        "title": "Przestrzeganie leków"
-      },
-      {
-        "title": "Sprawdzanie wartości klinicznych (A1c, BP)"
-      },
-      {
-        "title": "Używanie urządzeń medycznych"
-      },
-      {
-        "title": "Uczestnictwo w wizytach u lekarzy"
-      },
-      {
-        "title": "Wykonywanie badań przesiewowych i laboratoryjnych"
-      }
-    ],
-    "description": "Nasza platforma oparta na nauce jest zbudowana na zasadach ekonomii behawioralnej, aby działać dla najtrudniej dostępnych populacji.",
-    "cta": "Poznaj platformę Your Company"
-  },
   "servicesSection": {
     "title": "Nasze Usługi",
     "items": [

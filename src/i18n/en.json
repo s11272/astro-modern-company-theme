@@ -12,29 +12,6 @@
     "videoTitle": "How Your Co. Works",
     "playVideo": "Play Video"
   },
-  "products": {
-    "title": "Daily member engagement",
-    "subtitle": "Your Company reaches and motivates individuals struggling to adhere to care plans, rewarding them for healthy behaviors.",
-    "products": [
-      {
-        "title": "Medication Adherence"
-      },
-      {
-        "title": "Checking clinical values (A1c, BP)"
-      },
-      {
-        "title": "Using medical devices"
-      },
-      {
-        "title": "Attending provider appointments"
-      },
-      {
-        "title": "Getting screenings and labs"
-      }
-    ],
-    "description": "Our science-backed platform is built on the principles of behavioral economics to work for the hardest-to-reach populations.",
-    "cta": "Explore the Your Company platform"
-  },
   "partners": {
     "title": "Our Partners",
     "subtitle": "Trusted by industry leaders"
