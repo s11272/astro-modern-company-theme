@@ -63,6 +63,10 @@
         "slug": "shot-blasting-machine",
         "title": "Shot Blasting Machine",
         "image": "/products/shot_blasting_machine.jpeg",
+        "gallery": [
+          "/products/shot_blasting_machine.jpeg",
+          "/products/pipes_shot_blasting.jpeg"
+        ],
         "description": "High-performance shot blasting machine for efficient surface preparation and cleaning.",
         "details": {
           "fullDescription": "Our Shot Blasting Machines are engineered for maximum efficiency and durability. They are ideal for removing rust, scale, and other contaminants from metal surfaces, providing a perfect profile for subsequent coating or painting. Featuring advanced abrasive recycling systems and robust construction, these machines ensure cost-effective operation and long service life.",
@@ -86,6 +90,10 @@
         "slug": "pipes-shot-blasting",
         "title": "Pipes Shot Blasting",
         "image": "/products/pipes_shot_blasting.jpeg",
+        "gallery": [
+          "/products/pipes_shot_blasting.jpeg",
+          "/products/shot_blasting_machine.jpeg"
+        ],
         "description": "Specialized shot blasting system designed for cleaning and preparing pipe surfaces.",
         "details": {
           "fullDescription": "Specifically designed for the internal and external cleaning of pipes, our Pipe Shot Blasting systems provide uniform surface preparation. They can handle various pipe diameters and lengths, ensuring that every inch is treated to perfection. These systems are essential for industries like oil & gas, water distribution, and construction.",
@@ -109,6 +117,10 @@
         "slug": "roller-conveyor-shot-blasting",
         "title": "Roller Conveyor Shot Blasting",
         "image": "/products/roller_conveyor_shot_blasting.jpg",
+        "gallery": [
+          "/products/roller_conveyor_shot_blasting.jpg",
+          "/products/tunnel_type_shot_blasting.jpg"
+        ],
         "description": "Automated shot blasting system with roller conveyor for continuous surface treatment.",
         "details": {
           "fullDescription": "The Roller Conveyor Shot Blasting system is the workhorse of industrial surface preparation. It allows for the continuous treatment of plates, beams, and large structural components. The automated process ensures consistent quality and high throughput, making it ideal for large-scale manufacturing and fabrication plants.",
@@ -132,6 +144,10 @@
         "slug": "powder-coating-booth",
         "title": "Powder Coating Booth",
         "image": "/products/powder_coating.jpeg",
+        "gallery": [
+          "/products/powder_coating.jpeg",
+          "/products/spray_booth.jpeg"
+        ],
         "description": "State-of-the-art powder coating booth for high-quality surface finishing.",
         "details": {
           "fullDescription": "Our Powder Coating Booths offer a clean and controlled environment for applying high-quality finishes. Designed for maximum powder recovery and easy color changes, they help reduce waste and increase productivity. The advanced filtration systems ensure a safe working environment and meet all environmental regulations.",
@@ -155,6 +171,10 @@
         "slug": "spray-booth",
         "title": "Spray Booth",
         "image": "/products/spray_booth.jpeg",
+        "gallery": [
+          "/products/spray_booth.jpeg",
+          "/products/powder_coating.jpeg"
+        ],
         "description": "Professional spray booth system for precise and controlled coating applications.",
         "details": {
           "fullDescription": "Achieve professional-grade finishes with our advanced Spray Booths. Whether you are using wet paints or specialized coatings, our booths provide the perfect conditions for a flawless application. Features include precision temperature control, efficient exhaust systems, and high-intensity lighting for detailed work.",
@@ -178,6 +198,10 @@
         "slug": "tunnel-type-shot-blasting",
         "title": "Tunnel Type Shot Blasting",
         "image": "/products/tunnel_type_shot_blasting.jpg",
+        "gallery": [
+          "/products/tunnel_type_shot_blasting.jpg",
+          "/products/roller_conveyor_shot_blasting.jpg"
+        ],
         "description": "Large-scale tunnel shot blasting system for industrial surface preparation.",
         "details": {
           "fullDescription": "The Tunnel Type Shot Blasting machine is designed for high-volume, continuous processing of complex workpieces. Its tunnel configuration allows for seamless integration into production lines. This machine is particularly effective for heavy castings, forgings, and large steel constructions, providing thorough cleaning from all angles.",

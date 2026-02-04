@@ -16,6 +16,10 @@
         "slug": "shot-blasting-machine",
         "title": "Maszyna do śrutowania",
         "image": "/products/shot_blasting_machine.jpeg",
+        "gallery": [
+          "/products/shot_blasting_machine.jpeg",
+          "/products/pipes_shot_blasting.jpeg"
+        ],
         "description": "Wysokowydajna maszyna do śrutowania do efektywnego przygotowania i czyszczenia powierzchni.",
         "details": {
           "fullDescription": "Nasze maszyny do śrutowania zostały zaprojektowane z myślą o maksymalnej wydajności i trwałości. Są idealne do usuwania rdzy, zgorzeliny i innych zanieczyszczeń z powierzchni metalowych, zapewniając doskonały profil pod późniejsze malowanie lub powlekanie. Dzięki zaawansowanym systemom recyklingu ścierniwa i solidnej konstrukcji, maszyny te zapewniają opłacalną eksploatację i długą żywotność.",
@@ -39,6 +43,10 @@
         "slug": "pipes-shot-blasting",
         "title": "Śrutowanie rur",
         "image": "/products/pipes_shot_blasting.jpeg",
+        "gallery": [
+          "/products/pipes_shot_blasting.jpeg",
+          "/products/shot_blasting_machine.jpeg"
+        ],
         "description": "Specjalistyczny system śrutowania zaprojektowany do czyszczenia i przygotowania powierzchni rur.",
         "details": {
           "fullDescription": "Zaprojektowane specjalnie do wewnętrznego i zewnętrznego czyszczenia rur, nasze systemy śrutowania rur zapewniają jednolite przygotowanie powierzchni. Mogą obsługiwać rury o różnych średnicach i długościach, gwarantując perfekcyjną obróbkę każdego centymetra. Systemy te są niezbędne w branżach takich jak ropa i gaz, dystrybucja wody i budownictwo.",
@@ -62,6 +70,10 @@
         "slug": "roller-conveyor-shot-blasting",
         "title": "Tunel z przenośnikiem rolkowym do śrutowania",
         "image": "/products/roller_conveyor_shot_blasting.jpg",
+        "gallery": [
+          "/products/roller_conveyor_shot_blasting.jpg",
+          "/products/tunnel_type_shot_blasting.jpg"
+        ],
         "description": "Zautomatyzowany system śrutowania z przenośnikiem rolkowym do ciągłej obróbki powierzchni.",
         "details": {
           "fullDescription": "System śrutowania z przenośnikiem rolkowym to koń pociągowy przemysłowego przygotowania powierzchni. Pozwala na ciągłą obróbkę blach, dźwigarów i dużych elementów konstrukcyjnych. Zautomatyzowany proces zapewnia stałą jakość i wysoką przepustowość, co czyni go idealnym dla dużych zakładów produkcyjnych i konstrukcyjnych.",
@@ -85,6 +97,10 @@
         "slug": "powder-coating-booth",
         "title": "Kabina do malowania proszkowego",
         "image": "/products/powder_coating.jpeg",
+        "gallery": [
+          "/products/powder_coating.jpeg",
+          "/products/spray_booth.jpeg"
+        ],
         "description": "Nowoczesna kabina do malowania proszkowego zapewniająca wysoką jakość wykończenia powierzchni.",
         "details": {
           "fullDescription": "Nasze kabiny do malowania proszkowego oferują czyste i kontrolowane środowisko do nakładania wysokiej jakości powłok. Zaprojektowane z myślą o maksymalnym odzysku proszku i łatwej zmianie kolorów, pomagają zmniejszyć ilość odpadów i zwiększyć produktywność. Zaawansowane systemy filtracji zapewniają bezpieczne środowisko pracy i spełniają wszelkie normy ochrony środowiska.",
@@ -108,6 +124,10 @@
         "slug": "spray-booth",
         "title": "Kabina lakiernicza",
         "image": "/products/spray_booth.jpeg",
+        "gallery": [
+          "/products/spray_booth.jpeg",
+          "/products/powder_coating.jpeg"
+        ],
         "description": "Profesjonalna kabina lakiernicza do precyzyjnych i kontrolowanych aplikacji powłok.",
         "details": {
           "fullDescription": "Osiągnij profesjonalną jakość wykończenia dzięki naszym zaawansowanym kabinom lakierniczym. Niezależnie od tego, czy używasz farb mokrych, czy specjalistycznych powłok, nasze kabiny zapewniają idealne warunki do bezbłędnej aplikacji. Funkcje obejmują precyzyjną kontrolę temperatury, wydajne systemy wyciągowe i intensywne oświetlenie ułatwiające pracę nad detalami.",
@@ -131,6 +151,10 @@
         "slug": "tunnel-type-shot-blasting",
         "title": "Tunelowy system śrutowania",
         "image": "/products/tunnel_type_shot_blasting.jpg",
+        "gallery": [
+          "/products/tunnel_type_shot_blasting.jpg",
+          "/products/roller_conveyor_shot_blasting.jpg"
+        ],
         "description": "Wielkoskalowy tunelowy system śrutowania do przemysłowego przygotowania powierzchni.",
         "details": {
           "fullDescription": "Tunelowa maszyna do śrutowania jest przeznaczona do wysokonakładowej, ciągłej obróbki złożonych elementów. Jej tunelowa konfiguracja pozwala na bezproblemową integrację z liniami produkcyjnymi. Maszyna ta jest szczególnie skuteczna w przypadku ciężkich odlewów, odkuwek i dużych konstrukcji stalowych, zapewniając dokładne czyszczenie ze wszystkich stron.",
