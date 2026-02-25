@@ -11,6 +11,7 @@
   },
   "productsSection": {
     "title": "Nasze Produkty",
+    "viewDetails": "Zobacz szczegóły",
     "items": [
       {
         "slug": "shot-blasting-machine",

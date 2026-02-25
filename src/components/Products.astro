@@ -42,9 +42,9 @@ const defaultImage = "/products/shot_blasting_machine.jpeg";
               </p>
               <a
                 href={`/${lang}/products/${item.slug}`}
-                class="inline-block text-[var(--accent)] font-bold hover:underline"
+                class="inline-block text-[var(--products-card-link)] font-bold hover:underline"
               >
-                {lang === "pl" ? "Zobacz szczegóły" : "View details"} &rarr;
+                {t.productsSection.viewDetails} &rarr;
               </a>
             </div>
           </div>
