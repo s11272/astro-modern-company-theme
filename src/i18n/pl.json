@@ -181,7 +181,7 @@
     "products": "Produkty",
     "services": "Usługi",
     "partners": "Partnerzy",
-    "testimonials": "Opinie",
+    "news": "Aktualności",
     "contactUs": "Skontaktuj się z nami"
   },
   "keyMetrics": {
@@ -224,33 +224,62 @@
     "title": "Nasi Partnerzy",
     "subtitle": "Zaufali nam liderzy branży"
   },
-  "testimonials": {
-    "title": "Co mówią nasi klienci",
-    "subtitle": "Historie sukcesu",
-    "testimonials": [
+  "newsSection": {
+    "title": "Aktualności",
+    "viewDetails": "Czytaj więcej",
+    "items": [
       {
-        "quote": "Bezpiecznie przesłaliśmy naszą bazę danych trudno dostępnych pacjentów wraz ze wszystkimi ich istotnymi schorzeniami i liczbą pacjentów, których chcieliśmy zapisać. Ta platforma wykonała całą ciężką pracę, w tym dotarcie do pacjentów i ich aktywację.",
-        "author": "Dr Brian Hodgkins",
-        "title": "Wiceprezes ds. Operacji Klinicznych",
-        "company": "Desert Oasis Healthcare"
+        "slug": "participation-in-industrial-fair",
+        "title": "Udział w targach przemysłowych",
+        "image": "/products/shot_blasting_machine.jpeg",
+        "gallery": [
+          "/products/shot_blasting_machine.jpeg",
+          "/products/pipes_shot_blasting.jpeg"
+        ],
+        "description": "Niedawno braliśmy udział w Międzynarodowych Targach Przemysłowych, prezentując nasze najnowsze technologie obróbki powierzchni.",
+        "details": {
+          "fullDescription": "Nasza obecność na Międzynarodowych Targach Przemysłowych odniosła ogromny sukces. Nawiązaliśmy kontakty z liderami branży i zademonstrowaliśmy nasze nowe zautomatyzowane systemy śrutowania. Pozytywne opinie, które otrzymaliśmy, potwierdzają nasze zaangażowanie w innowacje i jakość rozwiązań z zakresu obróbki powierzchni.",
+          "specifications": []
+        }
       },
       {
-        "quote": "Możliwość zaoferowania programu, który jest tak angażujący i motywujący dla naszych członków, to przełom. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
-        "author": "Jill Feldman",
-        "title": "Dyrektor Operacyjny",
-        "company": "Health Plan of San Mateo"
+        "slug": "new-line-of-shot-blasting-machines",
+        "title": "Nowa linia komór śrutowniczych",
+        "image": "/products/tunnel_type_shot_blasting.jpg",
+        "gallery": [
+          "/products/tunnel_type_shot_blasting.jpg"
+        ],
+        "description": "Blastserv wprowadza nową, energooszczędną linię komór śrutowniczych zaprojektowanych dla przemysłu ciężkiego.",
+        "details": {
+          "fullDescription": "Z dumą ogłaszamy wprowadzenie na rynek naszej nowej generacji maszyn do śrutowania. Maszyny te wyposażone są w zaawansowane systemy odzyskiwania ścierniwa i energooszczędne silniki, co zmniejsza koszty operacyjne nawet o 20%, zachowując przy tym najwyższe standardy przygotowania powierzchni.",
+          "specifications": []
+        }
       },
       {
-        "quote": "Po rozpoczęciu przez naszych członków korzystania z tej platformy zaobserwowaliśmy znaczące zmniejszenie wykorzystania i poprawę wyników. Program więcej niż się zwrócił.",
-        "author": "Ian Straayer",
-        "title": "Kierownik ds. Poprawy Jakości",
-        "company": "Priority Health"
+        "slug": "expansion-of-service-offerings",
+        "title": "Rozszerzenie usług serwisowych",
+        "image": "/products/pipes_shot_blasting.jpeg",
+        "gallery": [
+          "/products/pipes_shot_blasting.jpeg"
+        ],
+        "description": "Rozszerzamy nasze usługi konserwacyjne i naprawcze, aby objąć szerszy zakres sprzętu do obróbki powierzchni.",
+        "details": {
+          "fullDescription": "Aby lepiej służyć naszym klientom, powiększyliśmy nasz dział serwisu. Oferujemy teraz kompleksową konserwację, naprawy awaryjne oraz przeglądy techniczne dla wszystkich typów maszyn do śrutowania i malowania, zapewniając płynne i wydajne działanie Państwa urządzeń.",
+          "specifications": []
+        }
       },
       {
-        "quote": "Widzenie ponad 90% naszych członków angażujących się w tę platformę codziennie jest świadectwem skuteczności programu. Zaobserwowaliśmy znaczącą poprawę wyników zdrowotnych i jakości życia naszych członków.",
-        "author": "Renee Kieffer",
-        "title": "Praktykujący Pielęgniarz",
-        "company": "Alameda Alliance for Health"
+        "slug": "completion-of-a-large-installation",
+        "title": "Zakończenie dużej instalacji",
+        "image": "/products/powder_coating.jpeg",
+        "gallery": [
+          "/products/powder_coating.jpeg"
+        ],
+        "description": "Pomyślne oddanie do użytku kompletnej linii do obróbki powierzchni dla dużego producenta części motoryzacyjnych.",
+        "details": {
+          "fullDescription": "Firma Blastserv z sukcesem zakończyła instalację i rozruch w pełni zautomatyzowanej linii do obróbki powierzchni dla jednego z wiodących producentów komponentów motoryzacyjnych. Projekt obejmował tunelową maszynę do śrutowania i nowoczesną kabinę do malowania proszkowego, znacząco zwiększając zdolności produkcyjne klienta.",
+          "specifications": []
+        }
       }
     ]
   },

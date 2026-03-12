@@ -1,0 +1,134 @@
+---
+import Layout from "./Layout.astro";
+import { getLangFromUrl } from "../i18n/utils";
+import { ui } from "../i18n/ui";
+
+interface Props {
+    newsItem: {
+        title: string;
+        description: string;
+        details: {
+            fullDescription: string;
+            specifications: { label: string; value: string }[];
+        };
+    };
+    mainImage: string;
+    gallery: string[];
+}
+
+const { newsItem, mainImage, gallery } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = ui[lang];
+---
+
+<Layout title={newsItem.title}>
+    <section class="pt-32 pb-20 bg-[var(--product-detail-bg)]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- News Images -->
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                    <div
+                        class="bg-[var(--product-detail-card-bg)] rounded-2xl overflow-hidden shadow-2xl mb-6"
+                    >
+                        <img
+                            id="main-news-image"
+                            src={mainImage}
+                            alt={newsItem.title}
+                            class="w-full h-[500px] object-cover transition-opacity duration-300"
+                            loading="lazy"
+                        />
+                    </div>
+                    {
+                        gallery && gallery.length > 0 && (
+                            <div class="grid grid-cols-4 gap-4">
+                                {gallery.map((img, index) => (
+                                    <div class="gallery-thumbnail-container bg-[var(--product-detail-card-bg)] rounded-lg overflow-hidden shadow-md cursor-pointer hover:opacity-80 transition-all border-2 border-transparent">
+                                        <img
+                                            src={img}
+                                            alt={`${newsItem.title} gallery ${index + 1}`}
+                                            class="gallery-thumbnail w-full h-24 object-cover"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        )
+                    }
+                </div>
+
+                <!-- News Info -->
+                <div class="w-full lg:w-1/2 px-4">
+                    <div class="lg:pl-8">
+                        <h1
+                            class="text-4xl lg:text-5xl font-serif font-bold text-[var(--product-detail-title)] mb-6"
+                        >
+                            {newsItem.title}
+                        </h1>
+                        <p
+                            class="text-xl text-[var(--product-detail-description)] font-medium mb-8"
+                        >
+                            {newsItem.description}
+                        </p>
+
+                        <div
+                            class="prose prose-lg text-[var(--product-detail-text)] mb-12"
+                        >
+                            <p>{newsItem.details.fullDescription}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+    function initGallery() {
+        const mainImage = document.getElementById(
+            "main-news-image",
+        ) as HTMLImageElement;
+        const thumbnails = document.querySelectorAll(
+            ".gallery-thumbnail-container",
+        );
+
+        if (!mainImage || thumbnails.length === 0) return;
+
+        // Set first thumbnail as active initially
+        thumbnails[0].classList.add("border-[var(--accent)]");
+
+        thumbnails.forEach((container) => {
+            container.addEventListener("click", () => {
+                const img = container.querySelector(
+                    ".gallery-thumbnail",
+                ) as HTMLImageElement;
+                if (!img || !mainImage) return;
+
+                // Update active state
+                thumbnails.forEach((t) =>
+                    t.classList.remove("border-[var(--accent)]"),
+                );
+                container.classList.add("border-[var(--accent)]");
+
+                // Fade out, change src, fade in
+                mainImage.style.opacity = "0";
+                setTimeout(() => {
+                    mainImage.src = img.src;
+                    mainImage.alt = img.alt;
+                    mainImage.style.opacity = "1";
+                }, 150);
+            });
+        });
+    }
+
+    // Initialize on page load
+    initGallery();
+
+    // Re-initialize after view transitions
+    document.addEventListener("astro:after-swap", initGallery);
+</script>
+
+<style>
+    .prose p {
+        line-height: 1.8;
+    }
+</style>

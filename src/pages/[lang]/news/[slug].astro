@@ -1,0 +1,31 @@
+---
+import { ui, languages } from "../../../i18n/ui";
+import NewsLayout from "../../../layouts/NewsLayout.astro";
+
+export async function getStaticPaths() {
+    const paths = [];
+
+    for (const lang of Object.keys(languages)) {
+        const newsItems = ui[lang as keyof typeof ui].newsSection.items;
+        for (const item of newsItems) {
+            paths.push({
+                params: { lang, slug: item.slug },
+                props: { newsItem: item, lang },
+            });
+        }
+    }
+
+    return paths;
+}
+
+const { newsItem } = Astro.props;
+
+// Default image if news item doesn't have one
+const defaultImage = "/products/shot_blasting_machine.jpeg";
+const mainImage = newsItem.image || defaultImage;
+
+// Gallery images - from data or fallback to main image
+const gallery = newsItem.gallery || [mainImage];
+---
+
+<NewsLayout newsItem={newsItem} mainImage={mainImage} gallery={gallery} />

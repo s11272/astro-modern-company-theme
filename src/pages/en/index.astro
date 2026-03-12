@@ -1,16 +1,16 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Hero from '../../components/Hero.astro';
-import KeyMetrics from '../../components/KeyMetrics.astro';
-import Products from '../../components/Products.astro';
-import CallOutWithImageLeft from '../../components/CallOutWithImageLeft.astro';
-import Partners from '../../components/Partners.astro';
-import CallToAction from '../../components/CallToAction.astro';
-import Testimonials from '../../components/Testimonials.astro';
-import ContactForm from '../../components/ContactForm.astro';
-import { ui } from '../../i18n/ui';
-import { getLangFromUrl } from '../../i18n/utils';
-import Services from '../../components/Services.astro';
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import KeyMetrics from "../../components/KeyMetrics.astro";
+import Products from "../../components/Products.astro";
+import CallOutWithImageLeft from "../../components/CallOutWithImageLeft.astro";
+import Partners from "../../components/Partners.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import News from "../../components/News.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import { ui } from "../../i18n/ui";
+import { getLangFromUrl } from "../../i18n/utils";
+import Services from "../../components/Services.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
@@ -28,8 +28,8 @@ const t = ui[lang];
   <section id="partners">
     <Partners />
   </section>
-  <section id="testimonials">
-    <Testimonials />
+  <section id="news">
+    <News />
   </section>
   <section id="contact">
     <ContactForm />

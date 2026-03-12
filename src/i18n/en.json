@@ -3,7 +3,7 @@
     "products": "Products",
     "services": "Services",
     "partners": "Partners",
-    "testimonials": "Testimonials",
+    "news": "News",
     "contactUs": "Contact Us"
   },
   "hero": {
@@ -16,33 +16,62 @@
     "title": "Our Partners",
     "subtitle": "Trusted by industry leaders"
   },
-  "testimonials": {
-    "title": "What Our Clients Say",
-    "subtitle": "Success stories",
-    "testimonials": [
+  "newsSection": {
+    "title": "News",
+    "viewDetails": "Read more",
+    "items": [
       {
-        "quote": "We securely sent our database of hard-to-reach patients with all their relevant conditions, and the number of patients we wanted to enroll. This platform did all the heavy lifting, including patient outreach and activation.",
-        "author": "Dr. Brian Hodgkins",
-        "title": "Executive Vice President of Clinical Operations",
-        "company": "Desert Oasis Healthcare"
+        "slug": "participation-in-industrial-fair",
+        "title": "Participation in industrial fair",
+        "image": "/products/shot_blasting_machine.jpeg",
+        "gallery": [
+          "/products/shot_blasting_machine.jpeg",
+          "/products/pipes_shot_blasting.jpeg"
+        ],
+        "description": "We recently participated in the International Industrial Fair, showcasing our latest surface treatment technologies.",
+        "details": {
+          "fullDescription": "Our presence at the International Industrial Fair was a great success. We connected with industry leaders and demonstrated our new automated shot blasting systems. The positive feedback we received confirms our commitment to innovation and quality in surface treatment solutions.",
+          "specifications": []
+        }
       },
       {
-        "quote": "Being able to offer a program that is so engaging and motivating to our members is a game changer. We have seen significant improvements in our members' health outcomes and quality of life.",
-        "author": "Jill Feldman",
-        "title": "Chief Operating Officer",
-        "company": "Health Plan of San Mateo"
+        "slug": "new-line-of-shot-blasting-machines",
+        "title": "New line of shot-blasting machines",
+        "image": "/products/tunnel_type_shot_blasting.jpg",
+        "gallery": [
+          "/products/tunnel_type_shot_blasting.jpg"
+        ],
+        "description": "Blastserv introduces a new, energy-efficient line of shot-blasting machines designed for heavy industry.",
+        "details": {
+          "fullDescription": "We are proud to announce the launch of our new generation of shot-blasting machines. These machines feature advanced abrasive recovery systems and energy-efficient motors, reducing operating costs by up to 20% while maintaining the highest surface preparation standards.",
+          "specifications": []
+        }
       },
       {
-        "quote": "After starting our members on this platform, we've seen significant decreases in utilization and improved outcomes. The program more than paid for itself.",
-        "author": "Ian Straayer",
-        "title": "Manager of Quality Improvement",
-        "company": "Priority Health"
+        "slug": "expansion-of-service-offerings",
+        "title": "Expansion of service offerings",
+        "image": "/products/pipes_shot_blasting.jpeg",
+        "gallery": [
+          "/products/pipes_shot_blasting.jpeg"
+        ],
+        "description": "We are expanding our maintenance and repair services to cover a wider range of surface treatment equipment.",
+        "details": {
+          "fullDescription": "To better serve our clients, we have expanded our service department. We now offer comprehensive maintenance, emergency repairs, and technical surveys for all types of shot-blasting and painting equipment, ensuring your machinery operates smoothly and efficiently.",
+          "specifications": []
+        }
       },
       {
-        "quote": "Seeing more than 90% of our members engage with this platform daily is a testament to the program's effectiveness. We've seen significant improvements in our members' health outcomes and quality of life.",
-        "author": "Renee Kieffer",
-        "title": "Nurse Practitioner",
-        "company": "Alameda Alliance for Health"
+        "slug": "completion-of-a-large-installation",
+        "title": "Completion of a large installation",
+        "image": "/products/powder_coating.jpeg",
+        "gallery": [
+          "/products/powder_coating.jpeg"
+        ],
+        "description": "Successful commissioning of a complete surface treatment line for a major automotive components manufacturer.",
+        "details": {
+          "fullDescription": "Blastserv has successfully completed the installation and commissioning of a fully automated surface treatment line for one of the leading automotive components manufacturers. The project included a tunnel-type shot blasting machine and a modern powder coating booth, significantly increasing the client's production capacity.",
+          "specifications": []
+        }
       }
     ]
   },
