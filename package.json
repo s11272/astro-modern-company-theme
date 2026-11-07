@@ -1,9 +1,9 @@
 {
-  "name": "modern-company-astro-theme",
+  "name": "blastserv-website",
+  "private": true,
   "author": {
-    "name": "Cory Trimm",
-    "email": "cory.trimm@gmail.com",
-    "url": "https://corytrimm.com"
+    "name": "Cezary Zmuda",
+    "email": "cezary.zmuda@gmail.com"
   },
   "type": "module",
   "version": "0.0.1",

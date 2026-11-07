@@ -11,6 +11,7 @@ Oficjalna strona internetowa firmy **Blastserv** ([blastserv.pl](https://blastse
 - [Struktura projektu](#struktura-projektu)
 - [Zarządzanie treścią (CMS) i wielojęzyczność](#zarządzanie-treścią-cms-i-wielojęzyczność)
 - [Wdrożenie (Deployment)](#wdrożenie-deployment)
+- [Licencje i podziękowania](#licencje-i-podziękowania)
 
 ---
 
@@ -95,10 +96,6 @@ W pliku `package.json` zdefiniowano następujące polecenia:
 │   │   ├── logos/                   # Logotypy partnerów biznesowych
 │   │   └── products/                # Dodatkowe zasoby graficzne produktów
 │   ├── components/                  # Komponenty Astro
-│   │   ├── CallOutWithImageLeft.astro
-│   │   ├── CallOutWithImageRightSide.astro
-│   │   ├── CallToAction.astro
-│   │   ├── Card.astro
 │   │   ├── ContactForm.astro        # Formularz kontaktowy
 │   │   ├── Footer.astro             # Stopka strony
 │   │   ├── Header.astro             # Nawigacja i przełącznik języka
@@ -129,6 +126,7 @@ W pliku `package.json` zdefiniowano następujące polecenia:
 ├── astro.config.mjs                 # Konfiguracja Astro (Tailwind, React, Sharp, i18n)
 ├── tailwind.config.mjs              # Konfiguracja Tailwind CSS
 ├── tsconfig.json                    # Konfiguracja TypeScript
+├── THIRD_PARTY_NOTICES.md           # Informacje o autorach i licencjach kodu zewnętrznego
 └── package.json
 ```
 
